@@ -6,6 +6,7 @@ import AboutComponent from "../components/pages/About/AboutComponent";
 const AppRoutes = () => {
   return (
     <BrowserRouter>
+    
       <Routes>
         <Route path="/" element={<HomeComponent />} />
         <Route path="/about" element={<AboutComponent />} />
