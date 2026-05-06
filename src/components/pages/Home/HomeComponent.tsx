@@ -1,12 +1,14 @@
-import Header from "../../Layouts/Header/Header"
-import TopHeader from "../../Layouts/Header/TopHeader"
+import AudienceSection from "./AudienceSection"
+import CallToAction from "./CallToAction"
+import OurServices from "./OurServices"
+
 
 const HomeComponent = () => {
   return (
     <div>
-        <TopHeader/>
-        <Header/>
-        HomeComponent
+        <OurServices/>
+        <AudienceSection/>
+        <CallToAction/>
     </div>
   )
 }
