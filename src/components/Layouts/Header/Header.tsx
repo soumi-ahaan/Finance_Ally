@@ -15,45 +15,71 @@ const Header = () => {
 
   const [openMobileDropdown, setOpenMobileDropdown] = useState("");
 
+  // ONLY REQUIRED DROPDOWNS
   const menuItems = [
     {
       title: "Services",
       links: [
-        "Keeper of Books",
-        "Tax Preparedness",
-        "Payroll & Compliance",
-        "Fractional CFO Support",
+        {
+          name: "Keeper of Books",
+          path: "/keeper-of-books",
+        },
+
+        {
+          name: "Tax Preparedness",
+          path: "/tax-preparedness",
+        },
+
+        {
+          name: "Payroll & Compliance",
+          path: "/payroll-compliance",
+        },
+
+        {
+          name: "Fractional CFO Support",
+          path: "/fractional-cfo-support",
+        },
       ],
     },
 
     {
       title: "Who We Serve",
-      links: ["Business Owners", "Family Offices"],
+      links: [
+        {
+          name: "Business Owners",
+          path: "/business-owners",
+        },
+
+        {
+          name: "Family Offices",
+          path: "/family-offices",
+        },
+      ],
     },
 
     {
       title: "WealthCare™",
       links: [
-        "Whole Finance",
-        "Financial Relationship",
-        "Living Legacy Strategy",
-        "Wealth Club Communities",
-      ],
-    },
+        {
+          name: "Whole Finance",
+          path: "/whole-finance",
+        },
 
-    {
-      title: "Resources",
-      links: [
-        "Blog",
-        "Case Studies",
-        "Insights",
-        "Guides",
-      ],
-    },
+        {
+          name: "Financial Relationship",
+          path: "/financial-relationship",
+        },
 
-    {
-      title: "Contact",
-      links: ["Contact Us", "Support", "Book Consultation"],
+        {
+          name: "Living Legacy Strategy",
+          path: "/living-legacy-strategy",
+        },
+
+        {
+          name: "Wealth Club Communities",
+          path: "/wealth-club-communities",
+        },
+      ],
     },
   ];
 
@@ -74,28 +100,29 @@ const Header = () => {
           <nav className="hidden lg:flex items-center gap-8">
             {/* Home */}
             <Link
-              to="#"
-              className="text-[#00c8d7] text-[15px] font-semibold"
+              to="/"
+              className="text-[#00c8d7] text-[15px] "
             >
               Home
             </Link>
 
             {/* About */}
             <Link
-              to="#"
-              className="text-white hover:text-[#00c8d7] duration-300 text-[15px] font-medium"
+              to="/about"
+              className="text-white hover:text-[#00c8d7] duration-300 text-[15px] "
             >
               About
             </Link>
 
-            {/* Dropdown Menus */}
+            {/* DROPDOWN MENUS */}
             {menuItems.map((item, index) => (
               <div
                 key={index}
                 className="relative group"
               >
+                {/* Menu Title */}
                 <div className="flex items-center gap-1 cursor-pointer">
-                  <span className="text-white group-hover:text-[#00c8d7] duration-300 text-[15px] font-medium">
+                  <span className="text-white group-hover:text-[#00c8d7] duration-300 text-[15px] ">
                     {item.title}
                   </span>
 
@@ -107,15 +134,15 @@ const Header = () => {
                 </div>
 
                 {/* Dropdown */}
-                <div className="absolute top-[180%] left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 translate-y-4 group-hover:translate-y-0 min-w-[280px] bg-[#0d0d0d] border border-[#222] rounded-2xl p-3 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+                <div className="absolute top-[180%] left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 translate-y-4 group-hover:translate-y-0 min-w-[300px] bg-[#0d0d0d] rounded-2xl p-3 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
                   <div className="flex flex-col gap-1">
                     {item.links.map((link, i) => (
                       <Link
                         key={i}
-                        to="#"
+                        to={link.path}
                         className="group/item flex items-center justify-between rounded-xl px-4 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
                       >
-                        <span>{link}</span>
+                        <span>{link.name}</span>
 
                         <ArrowRight
                           size={14}
@@ -128,6 +155,22 @@ const Header = () => {
                 </div>
               </div>
             ))}
+
+            {/* Resources */}
+            <Link
+              to="/resources"
+              className="text-white hover:text-[#00c8d7] duration-300 text-[15px]"
+            >
+              Resources
+            </Link>
+
+            {/* Contact */}
+            <Link
+              to="/contact"
+              className="text-white hover:text-[#00c8d7] duration-300 text-[15px]"
+            >
+              Contact
+            </Link>
           </nav>
 
           {/* CTA */}
@@ -155,7 +198,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       <div
         className={`lg:hidden overflow-hidden duration-300 bg-black ${
           mobileMenu ? "max-h-[1200px]" : "max-h-0"
@@ -164,7 +207,8 @@ const Header = () => {
         <div className="px-5 pb-6 pt-2 flex flex-col border-t border-[#1d1d1d]">
           {/* Home */}
           <Link
-            to="#"
+            to="/"
+            onClick={() => setMobileMenu(false)}
             className="text-[#00c8d7] font-medium py-4 border-b border-[#1b1b1b]"
           >
             Home
@@ -172,13 +216,14 @@ const Header = () => {
 
           {/* About */}
           <Link
-            to="#"
+            to="/about"
+            onClick={() => setMobileMenu(false)}
             className="text-white font-medium py-4 border-b border-[#1b1b1b]"
           >
             About
           </Link>
 
-          {/* Mobile Dropdowns */}
+          {/* MOBILE DROPDOWNS */}
           {menuItems.map((item, index) => (
             <div
               key={index}
@@ -209,6 +254,7 @@ const Header = () => {
                 />
               </button>
 
+              {/* Dropdown Content */}
               <div
                 className={`overflow-hidden duration-300 ${
                   openMobileDropdown === item.title
@@ -220,10 +266,11 @@ const Header = () => {
                   {item.links.map((link, i) => (
                     <Link
                       key={i}
-                      to="#"
+                      to={link.path}
+                      onClick={() => setMobileMenu(false)}
                       className="flex items-center justify-between rounded-xl px-4 py-3 text-[14px] text-[#cfcfcf] hover:bg-[#161616] hover:text-[#00c8d7] duration-300"
                     >
-                      <span>{link}</span>
+                      <span>{link.name}</span>
 
                       <ArrowRight
                         size={13}
@@ -235,6 +282,24 @@ const Header = () => {
               </div>
             </div>
           ))}
+
+          {/* Resources */}
+          <Link
+            to="/resources"
+            onClick={() => setMobileMenu(false)}
+            className="text-white font-medium py-4 border-b border-[#1b1b1b]"
+          >
+            Resources
+          </Link>
+
+          {/* Contact */}
+          <Link
+            to="/contact"
+            onClick={() => setMobileMenu(false)}
+            className="text-white font-medium py-4 border-b border-[#1b1b1b]"
+          >
+            Contact
+          </Link>
 
           {/* CTA */}
           <button className="bg-[#2da7b3] mt-5 hover:bg-[#238d97] duration-300 text-white rounded-full h-[48px] px-7 flex items-center justify-center gap-4 font-semibold text-[16px]">
