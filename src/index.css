@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+body{
+    font-family: "Outfit", sans-serif;
+}
+
+.font-highlight{
+    font-family: "Caveat", cursive;
+}
+
+.font-heading{
+    font-family: "Raleway", sans-serif;
+}
