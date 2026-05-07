@@ -134,7 +134,7 @@ const ServiceCard = ({
 
         {/* Icon */}
         {iconImage && (
-          <div className="absolute left-7 -bottom-8 w-[74px] h-[74px] rounded-full bg-[#f4a261] border-[5px] border-white flex items-center justify-center z-100">
+          <div className="absolute left-7 -bottom-8 w-[74px] h-[74px] rounded-full bg-[#f4a261] border-[5px] border-white flex items-center justify-center z-40">
             <img
               src={iconImage}
               alt="icon"
