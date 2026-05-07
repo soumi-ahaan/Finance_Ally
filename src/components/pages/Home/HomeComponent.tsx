@@ -1,3 +1,4 @@
+import AboutSection from "./AboutSection"
 import AudienceSection from "./AudienceSection"
 import CallToAction from "./CallToAction"
 import { HeroBanner } from "./HeroBanner"
@@ -10,6 +11,7 @@ const HomeComponent = () => {
     <div>
       <HeroBanner/>
        <StatBanner/>
+       <AboutSection/>
         <OurServices/>
         <AudienceSection/>
         <CallToAction/>
