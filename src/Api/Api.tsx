@@ -49,6 +49,51 @@ export const getMediaById = async (
 };
 
 // ==============================
+// CONTACT FORM TYPES
+// ==============================
+
+export type ContactFormData = {
+  name: string;
+  business_family_office_name: string;
+  email: string;
+  phone: string;
+  business_owner_or_family_office: string;
+  support_needed: string;
+  books_current: string;
+  accounting_system: string;
+  message: string;
+};
+
+// ==============================
+// CONTACT FORM API
+// ==============================
+
+export const contactentries = async (
+  data: ContactFormData
+) => {
+  try {
+    const response = await axios.post(
+      "https://finance-ally.ahaanmedia.com/wp-json/contact-entry/v1/submit",
+      data,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    console.log(
+      "Contact Form API Error:",
+      error
+    );
+
+    throw error;
+  }
+};
+
+// ==============================
 // FUTURE APIs
 // ==============================
 

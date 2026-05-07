@@ -1,19 +1,17 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import  { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 
 import {
-  List,
-  X,
   CaretDown,
-  ArrowRight,
+  ArrowRight, CaretRightIcon
 } from "@phosphor-icons/react";
 
 import logo from "../../../assets/Company_Logo.png";
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
-
-  const [openMobileDropdown, setOpenMobileDropdown] = useState("");
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // const [openMobileDropdown, setOpenMobileDropdown] = useState("");
 
   // ONLY REQUIRED DROPDOWNS
   const menuItems = [
@@ -40,53 +38,13 @@ const Header = () => {
           path: "/fractional-cfo-support",
         },
       ],
-    },
-
-    {
-      title: "Who We Serve",
-      links: [
-        {
-          name: "Business Owners",
-          path: "/business-owners",
-        },
-
-        {
-          name: "Family Offices",
-          path: "/family-offices",
-        },
-      ],
-    },
-
-    {
-      title: "WealthCare™",
-      links: [
-        {
-          name: "Whole Finance",
-          path: "/whole-finance",
-        },
-
-        {
-          name: "Financial Relationship",
-          path: "/financial-relationship",
-        },
-
-        {
-          name: "Living Legacy Strategy",
-          path: "/living-legacy-strategy",
-        },
-
-        {
-          name: "Wealth Club Communities",
-          path: "/wealth-club-communities",
-        },
-      ],
-    },
+    }
   ];
 
   return (
-    <header className="w-full bg-black sticky top-0 z-50 border-b border-[#1a1a1a]">
-      <div className="max-w-[1440px] mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-[82px]">
+    <header className="bg-black sticky top-0 z-50 border-b border-[#1a1a1a] py-2.5">
+      <div className="max-w-[1440px]mx-auto px-4 md:px-8 lg:px-12 xl:px-[70px]">
+        <div className="flex items-center justify-between h-[82px] xl:gap-[90px]">
           {/* Logo */}
           <Link to="/">
             <img
@@ -97,22 +55,31 @@ const Header = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-4 py-2.5">
             {/* Home */}
-            <Link
+            <NavLink
               to="/"
-              className="text-[#00c8d7] text-[15px] "
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
+                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+              }
+
             >
               Home
-            </Link>
+            </NavLink>
 
             {/* About */}
-            <Link
+            <NavLink
               to="/about"
-              className="text-white hover:text-[#00c8d7] duration-300 text-[15px] "
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
+                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+              }
             >
               About
-            </Link>
+            </NavLink>
 
             {/* DROPDOWN MENUS */}
             {menuItems.map((item, index) => (
@@ -122,7 +89,7 @@ const Header = () => {
               >
                 {/* Menu Title */}
                 <div className="flex items-center gap-1 cursor-pointer">
-                  <span className="text-white group-hover:text-[#00c8d7] duration-300 text-[15px] ">
+                  <span className="text-white group-hover:text-[#1F7180] hover:font-bold hover:font-bold duration-300 text-base px-2.5 py-3">
                     {item.title}
                   </span>
 
@@ -156,161 +123,222 @@ const Header = () => {
               </div>
             ))}
 
+            {/* Who We Serve */}
+            <NavLink
+              to="/who-we-serve"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
+                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+              }
+            >
+              Who We Serve
+            </NavLink>
+
+            {/* Money Medic */}
+            <NavLink
+              to="/money-medic"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
+                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+              }
+            >
+              Money Medic
+            </NavLink>
+
             {/* Resources */}
-            <Link
+            <NavLink
               to="/resources"
-              className="text-white hover:text-[#00c8d7] duration-300 text-[15px]"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
+                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+              }
             >
               Resources
-            </Link>
+            </NavLink>
 
             {/* Contact */}
-            <Link
+            <NavLink
               to="/contact"
-              className="text-white hover:text-[#00c8d7] duration-300 text-[15px]"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
+                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+              }
             >
               Contact
-            </Link>
+            </NavLink>
           </nav>
 
           {/* CTA */}
           <div className="hidden lg:flex">
-            <button className="bg-[#2da7b3] hover:bg-[#238d97] duration-300 text-white rounded-full h-[48px] pl-6 pr-4 flex items-center gap-3 font-semibold text-[16px]">
+            <button className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-7 pr-3 py-2.5 flex items-center gap-3 font-semibold text-base">
               Book Now
 
-              <div className="w-8 h-8 rounded-full bg-white text-[#2da7b3] flex items-center justify-center shrink-0">
-                <ArrowRight size={14} weight="bold" />
+              <div className="w-8 h-8 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">
+                <CaretRightIcon size={14} weight="bold" />
               </div>
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            onClick={() => setMobileMenu(!mobileMenu)}
-            className="lg:hidden text-white"
+            className="md:hidden mt-4 ml-auto flex items-center rounded-lg  bg-transparent  justify-center h-16 w-16 text-[#1F7180]"
+            onClick={() => setMobileMenu(true)}
           >
-            {mobileMenu ? (
-              <X size={34} weight="bold" />
-            ) : (
-              <List size={34} weight="bold" />
-            )}
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1F7180" stroke="#1F7180"
+              strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
           </button>
         </div>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* OFF-CANVAS MENU */}
       <div
-        className={`lg:hidden overflow-hidden duration-300 bg-black ${
-          mobileMenu ? "max-h-[1200px]" : "max-h-0"
-        }`}
-      >
-        <div className="px-5 pb-6 pt-2 flex flex-col border-t border-[#1d1d1d]">
-          {/* Home */}
-          <Link
+        className={`fixed top-0 right-0 h-full w-[280px] bg-white shadow-lg z-50 transform transition-transform duration-300 ${mobileMenu ? "translate-x-0" : "translate-x-full"
+          }`}
+      ><button onClick={() => setMobileMenu(false)} className="ml-6 my-6 py-1 px-2.5 text-xl left-0 bg-[#1F6B5A] text-white rounded-full">✕</button>
+        <div className=" flex flex-col gap-2">
+
+          <NavLink
             to="/"
-            onClick={() => setMobileMenu(false)}
-            className="text-[#00c8d7] font-medium py-4 border-b border-[#1b1b1b]"
+            className={({ isActive }) =>
+              isActive
+                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+            }
           >
             Home
-          </Link>
-
-          {/* About */}
-          <Link
+          </NavLink>
+          <NavLink
             to="/about"
-            onClick={() => setMobileMenu(false)}
-            className="text-white font-medium py-4 border-b border-[#1b1b1b]"
+            className={({ isActive }) =>
+              isActive
+                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+            }
           >
             About
-          </Link>
+          </NavLink>
 
-          {/* MOBILE DROPDOWNS */}
-          {menuItems.map((item, index) => (
-            <div
-              key={index}
-              className="border-b border-[#1b1b1b]"
-            >
-              <button
-                onClick={() =>
-                  setOpenMobileDropdown(
-                    openMobileDropdown === item.title
-                      ? ""
-                      : item.title
-                  )
-                }
-                className="w-full flex items-center justify-between py-4"
+          {/* DROPDOWN MENUS */}
+{menuItems.map((item, index) => {
+  const isOpen = openIndex === index;
+
+  return (
+    <div key={index} className="relative">
+      {/* Menu Title */}
+      <div
+        onClick={() =>
+          setOpenIndex(isOpen ? null : index)
+        }
+        className="flex items-center justify-between gap-1 cursor-pointer text-[#1F7180] hover:bg-[#1F7180] hover:text-white text-base px-6 py-3"
+      >
+        <span className="font-[550]">
+          {item.title}
+        </span>
+
+        <CaretDown
+          size={16}
+          weight="bold"
+          className={`duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        />
+      </div>
+
+      {/* Dropdown */}
+      <div
+        className={`overflow-hidden duration-300 ${
+          isOpen
+            ? "max-h-[500px] opacity-100 mt-2"
+            : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="min-w-[50px] bg-[#1F7180] rounded-sm p-2 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
+          <div className="flex flex-col gap-1">
+            {item.links.map((link, i) => (
+              <Link
+                key={i}
+                to={link.path}
+                className="flex items-center justify-between rounded-sm px-2 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
               >
-                <span className="text-white font-medium">
-                  {item.title}
-                </span>
+                <span>{link.name}</span>
 
-                <CaretDown
-                  size={16}
+                <ArrowRight
+                  size={14}
                   weight="bold"
-                  className={`text-white duration-300 ${
-                    openMobileDropdown === item.title
-                      ? "rotate-180"
-                      : ""
-                  }`}
                 />
-              </button>
-
-              {/* Dropdown Content */}
-              <div
-                className={`overflow-hidden duration-300 ${
-                  openMobileDropdown === item.title
-                    ? "max-h-[500px] pb-4"
-                    : "max-h-0"
-                }`}
-              >
-                <div className="bg-[#0f0f0f] rounded-2xl p-2 flex flex-col gap-1">
-                  {item.links.map((link, i) => (
-                    <Link
-                      key={i}
-                      to={link.path}
-                      onClick={() => setMobileMenu(false)}
-                      className="flex items-center justify-between rounded-xl px-4 py-3 text-[14px] text-[#cfcfcf] hover:bg-[#161616] hover:text-[#00c8d7] duration-300"
-                    >
-                      <span>{link.name}</span>
-
-                      <ArrowRight
-                        size={13}
-                        weight="bold"
-                      />
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-
-          {/* Resources */}
-          <Link
-            to="/resources"
-            onClick={() => setMobileMenu(false)}
-            className="text-white font-medium py-4 border-b border-[#1b1b1b]"
-          >
-            Resources
-          </Link>
-
-          {/* Contact */}
-          <Link
-            to="/contact"
-            onClick={() => setMobileMenu(false)}
-            className="text-white font-medium py-4 border-b border-[#1b1b1b]"
-          >
-            Contact
-          </Link>
-
-          {/* CTA */}
-          <button className="bg-[#2da7b3] mt-5 hover:bg-[#238d97] duration-300 text-white rounded-full h-[48px] px-7 flex items-center justify-center gap-4 font-semibold text-[16px]">
-            Book Now
-
-            <div className="w-8 h-8 rounded-full bg-white text-[#2da7b3] flex items-center justify-center">
-              <ArrowRight size={14} weight="bold" />
-            </div>
-          </button>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
+    </div>
+  );
+})}
+          <NavLink
+            to="/who-we-serve"
+            className={({ isActive }) =>
+              isActive
+                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+            }
+          >
+            Who We Serve
+          </NavLink>
+          <NavLink
+            to="/money-medic"
+            className={({ isActive }) =>
+              isActive
+                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+            }
+          >
+            Money Medic
+          </NavLink>
+          <NavLink
+            to="/resources"
+            className={({ isActive }) =>
+              isActive
+                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+            }
+          >
+           Resources
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive
+                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+            }
+          >
+           Contact
+          </NavLink>
+          {/* CTA */}
+          <div className="ml-6 mr-6">
+            <button className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-5 pr-3 py-2 flex items-center gap-3 font-semibold text-sm">
+              Book Now
+
+              <div className="w-6 h-6 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">
+                <CaretRightIcon size={10} weight="bold" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* OVERLAY */}
+      {mobileMenu && (
+        <div
+          className="fixed inset-0 bg-black/40 z-40"
+          onClick={() => setMobileMenu(false)}
+        />
+      )}
     </header>
   );
 };
