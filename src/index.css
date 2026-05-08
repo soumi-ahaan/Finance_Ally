@@ -11,3 +11,13 @@ body{
 .font-heading{
     font-family: "Raleway", sans-serif;
 }
+
+/* globals.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
