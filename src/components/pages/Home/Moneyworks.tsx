@@ -26,7 +26,7 @@ export default function MoneyWorks() {
                     {/* Right Side: Content */}
                     <div className="flex flex-col ">
 
-                        <h2 className="text-[24px] lg:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight">
+                        <h2 className="text-[24px] lg:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight font-heading">
                             Money Works Like the Heart
                         </h2>
 
