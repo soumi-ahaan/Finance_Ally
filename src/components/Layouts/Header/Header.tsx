@@ -203,7 +203,7 @@ const Header = () => {
         <div className=" flex flex-col gap-2">
 
           <NavLink
-            to="/"
+            to="/" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -213,7 +213,7 @@ const Header = () => {
             Home
           </NavLink>
           <NavLink
-            to="/about"
+            to="/about" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -280,7 +280,7 @@ const Header = () => {
   );
 })}
           <NavLink
-            to="/who-we-serve"
+            to="/who-we-serve" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -290,7 +290,7 @@ const Header = () => {
             Who We Serve
           </NavLink>
           <NavLink
-            to="/money-medic"
+            to="/money-medic" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -300,7 +300,7 @@ const Header = () => {
             Money Medic
           </NavLink>
           <NavLink
-            to="/resources"
+            to="/resources" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -310,7 +310,7 @@ const Header = () => {
            Resources
           </NavLink>
           <NavLink
-            to="/contact"
+            to="/contact" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -321,7 +321,7 @@ const Header = () => {
           </NavLink>
           {/* CTA */}
           <div className="ml-6 mr-6">
-            <button className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-5 pr-3 py-2 flex items-center gap-3 font-semibold text-sm">
+            <button  onClick={() => setMobileMenu(false)} className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-5 pr-3 py-2 flex items-center gap-3 font-semibold text-sm">
               Book Now
 
               <div className="w-6 h-6 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">
