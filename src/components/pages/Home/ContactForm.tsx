@@ -92,7 +92,8 @@ const supportOptions = [
 ];
 
   return (
-    <section className="bg-[#F6F6F6] max-w-[1440px] mx-auto">
+    <section className="bg-[#F6F6F6] ">
+      <div className="max-w-[1440px] mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-[30px] overflow-hidden">
 
         {/* LEFT SIDE */}
@@ -425,6 +426,7 @@ const supportOptions = [
             className="w-full h-full object-cover"
           />
         </div>
+      </div>
       </div>
     </section>
   );
