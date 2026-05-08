@@ -39,13 +39,13 @@ const OurServices = () => {
         <div className="flex items-center gap-3 mb-5">
           <div className="w-10 h-[2px] bg-[#f4a261]"></div>
 
-          <span className="text-[#f4a261] italic text-[18px] lg:text-[20px] font-medium tracking-wide">
+          <span className="text-[#f4a261] italic text-[18px] lg:text-[20px] font-medium font-highlight tracking-wide">
             Our Services
           </span>
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-[#1f2d38] text-[36px] sm:text-[44px] md:text-[38px] lg:text-[38px] leading-[1.2] font-bold tracking-[-2px]">
+        <h2 className="text-[#1f2d38] text-[36px] sm:text-[44px] md:text-[38px] lg:text-[38px] leading-[1.2] font-bold font-heading tracking-[-2px]">
           Comprehensive Accounting
           <br />
           Services for Your Business
@@ -147,7 +147,7 @@ const ServiceCard = ({
       {/* Content */}
       <div className="px-7 pt-14 pb-8">
         {/* Title */}
-        <h3 className="text-[#2d2d2d] text-[22px] leading-[1.2] font-bold mb-5">
+        <h3 className="text-[#2d2d2d] text-[22px] leading-[1.2] font-heading font-bold mb-5">
           {service.title.rendered}
         </h3>
 
