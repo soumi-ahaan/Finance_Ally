@@ -62,24 +62,24 @@ export default function AudienceSection() {
               <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/30"></div>
 
               {/* Content */}
-              <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 sm:px-10 py-10">
+              <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 lg:px-10 py-10">
 
                 {/* Title */}
-                <h2 className="text-white text-[34px] sm:text-[42px] lg:text-[48px] leading-[1.1] font-bold mb-5">
+                <h2 className="text-white text-[28px] lg:text-[32px] xl:text-[38px] leading-[1.1] font-bold mb-5">
                   {item.title}
                 </h2>
 
                 {/* Description */}
-                <p className="text-white/95 text-[17px] sm:text-[18px] leading-[1.8] font-medium max-w-[520px] mb-8">
+                <p className="text-white/95 text-base sm:text-[18px] leading-[1.8] font-semibold max-w-[520px] mb-8">
                   {item.description}
                 </p>
 
                 {/* Button */}
                 <button
                   className="group/btn border border-white/70 hover:bg-white transition-all duration-300
-                  rounded-full h-[56px] sm:h-[60px] pl-7 pr-4 flex items-center gap-5"
+                  rounded-full h-[56px] sm:h-[60px] pl-3 sm:pl-7 pr-2 sm:pr-4 flex items-center gap-3 sm:gap-5"
                 >
-                  <span className="text-white group-hover/btn:text-[#1f2d38] transition-colors duration-300 text-[15px] sm:text-[16px] font-medium">
+                  <span className="text-white group-hover/btn:text-[#1f2d38] transition-colors duration-300 text-sm sm:text-[16px] font-medium">
                     {item.buttonText}
                   </span>
 
