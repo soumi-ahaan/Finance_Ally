@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CaretRight,
   FacebookLogo,
@@ -10,14 +10,28 @@ import {
 } from "@phosphor-icons/react";
 
 import logo2 from "../../../assets/footer_logo.png";
+
 const Footer: React.FC = () => {
+
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!email) return;
+
+    console.log("Submitted Email:", email);
+
+    setEmail("");
+  };
+
   return (
     <footer className="w-full bg-[#000000] overflow-hidden">
       {/* Main Container */}
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[70px] pt-[50px] pb-[30px]">
 
         {/* Top Section */}
-        <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-8 mb-[42px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:flex xl:flex-row xl:items-center xl:justify-between gap-8 mb-[42px]">
 
           {/* Left Area */}
           <div className="flex flex-col lg:flex-row lg:items-center gap-6 xl:gap-10">
@@ -33,7 +47,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Newsletter Text */}
-            <p className="max-w-[260px] text-white font-outfit font-semibold text-[16px] leading-[26px]">
+            <p className="max-w-[260px] text-white font-semibold text-[16px] leading-[26px]">
               Sign Up To Received The Lastest News And Eventsfrom Us
             </p>
           </div>
@@ -42,25 +56,34 @@ const Footer: React.FC = () => {
           <div className="flex flex-col lg:flex-row lg:items-center gap-6">
 
             {/* Email Field */}
-            <div className="w-full lg:w-[420px] h-[48px] border border-[#6A6A6AB2] rounded-full bg-transparent flex items-center justify-between pl-6 pr-2">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full lg:w-[420px] h-[48px] border border-[#6A6A6AB2] rounded-full bg-transparent flex items-center justify-between pl-6 pr-2"
+            >
               <input
                 type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your Email ID"
                 className="bg-transparent outline-none border-none text-white placeholder:text-white font-poppins font-medium text-[15px] w-full"
               />
 
-              <button className="w-[33px] h-[30px] rounded-full bg-white flex items-center justify-center hover:scale-110 duration-300">
+              <button
+                type="submit"
+                className="w-[33px] h-[30px] rounded-full bg-white flex items-center justify-center hover:scale-110 duration-300"
+              >
                 <CaretRight
                   size={22}
                   weight="bold"
                   className="text-[#1F7180]"
                 />
               </button>
-            </div>
+            </form>
 
             {/* Social */}
             <div className="flex items-center gap-4">
-              <p className="text-white font-outfit font-semibold text-[18px] whitespace-nowrap">
+              <p className="text-white font-semibold text-[18px] whitespace-nowrap">
                 Follow Us :
               </p>
 
@@ -97,7 +120,7 @@ const Footer: React.FC = () => {
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-white font-raleway font-semibold text-[18px] mb-7">
+              <h3 className="text-white font-heading font-semibold text-[18px] mb-7">
                 Quick Links
               </h3>
 
@@ -124,7 +147,7 @@ const Footer: React.FC = () => {
 
             {/* Services */}
             <div>
-              <h3 className="text-white font-raleway font-semibold text-[18px] mb-7">
+              <h3 className="text-white font-heading font-semibold text-[18px] mb-7">
                 Our Services
               </h3>
 
@@ -149,7 +172,7 @@ const Footer: React.FC = () => {
 
             {/* Address */}
             <div>
-              <h3 className="text-white font-raleway font-semibold text-[18px] mb-7">
+              <h3 className="text-white font-heading font-semibold text-[18px] mb-7">
                 Our Address
               </h3>
 
@@ -167,7 +190,7 @@ const Footer: React.FC = () => {
                       className="text-[#2B9896] mt-1 shrink-0"
                     />
 
-                    <span className="text-[#FFFFFFB2] font-outfit text-[16px] leading-[28px] group-hover:translate-x-2 transition-all duration-300">
+                    <span className="text-[#FFFFFFB2] text-[16px] leading-[28px] group-hover:translate-x-2 transition-all duration-300">
                       Mailing Address: P.O. Box 980, Verdi, NV 89439
                     </span>
                   </a>
@@ -186,7 +209,7 @@ const Footer: React.FC = () => {
                       className="text-[#2B9896] shrink-0"
                     />
 
-                    <span className="text-[#FFFFFFB2] font-outfit text-[16px] group-hover:translate-x-2 transition-all duration-300">
+                    <span className="text-[#FFFFFFB2] text-[16px] group-hover:translate-x-2 transition-all duration-300">
                       7755509999
                     </span>
                   </a>
@@ -205,7 +228,7 @@ const Footer: React.FC = () => {
                       className="text-[#2B9896] mt-1 shrink-0"
                     />
 
-                    <span className="text-[#FFFFFFB2] font-outfit text-[16px] leading-[28px] break-all group-hover:translate-x-2 transition-all duration-300">
+                    <span className="text-[#FFFFFFB2] text-[16px] leading-[28px] break-all group-hover:translate-x-2 transition-all duration-300">
                       Bookkeeping@Finanzaaccounting.Com
                     </span>
                   </a>
@@ -215,7 +238,7 @@ const Footer: React.FC = () => {
 
             {/* Resources */}
             <div>
-              <h3 className="text-white font-raleway font-semibold text-[18px] mb-7">
+              <h3 className="text-white font-heading font-semibold text-[18px] mb-7">
                 Resources
               </h3>
 
@@ -239,7 +262,7 @@ const Footer: React.FC = () => {
 
             {/* Popular Posts */}
             <div>
-              <h3 className="text-white font-raleway font-semibold text-[18px] mb-7">
+              <h3 className="text-white font-heading font-semibold text-[18px] mb-7">
                 Popular Posts
               </h3>
 
@@ -258,11 +281,11 @@ const Footer: React.FC = () => {
                     />
 
                     <div>
-                      <h4 className="text-white font-outfit font-medium text-[15px] leading-[23px] group-hover:text-[#2B9896] transition-all duration-300">
+                      <h4 className="text-white font-medium text-[15px] leading-[23px] group-hover:text-[#2B9896] transition-all duration-300">
                         Top 5 Trends in Modern Infrastructure Projects
                       </h4>
 
-                      <p className="text-[#FFFFFF80] font-outfit text-[13px] mt-2">
+                      <p className="text-[#FFFFFF80] text-[13px] mt-2">
                         Dec 15, 2025
                       </p>
                     </div>
@@ -277,7 +300,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-5 pt-7">
 
           {/* Copyright */}
-          <p className="text-[#FBFBFB] text-[15px] font-outfit font-normal text-center md:text-left leading-[28px]">
+          <p className="text-[#FBFBFB] text-[15px] font-normal text-center md:text-left leading-[28px]">
             © Copyright Year{" "}
             <span className="text-[#2B9896] font-extrabold">
               Finanzxa Accounting
@@ -297,7 +320,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-4 text-center">
             <a
               href="#"
-              className="relative text-[#FBFBFB] font-outfit font-normal text-[14px] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+              className="relative text-[#FBFBFB] font-normal text-[14px] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
             >
               Privacy Policy
             </a>
@@ -306,7 +329,7 @@ const Footer: React.FC = () => {
 
             <a
               href="#"
-              className="relative text-[#FBFBFB] font-outfit font-normal text-[14px] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+              className="relative text-[#FBFBFB] font-normal text-[14px] after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
             >
               Terms & conditions
             </a>
