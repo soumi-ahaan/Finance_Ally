@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircleIcon } from "@phosphor-icons/react";
+import { CaretRightIcon , SealCheckIcon  } from "@phosphor-icons/react";
 
 const audienceData = [
   {
@@ -88,7 +88,7 @@ export default function AudienceSection() {
                     flex items-center justify-center shrink-0
                     group-hover/btn:translate-x-1 transition-transform duration-300"
                   >
-                    <ArrowRight size={18} weight="bold" />
+                    <CaretRightIcon  size={18} weight="bold" />
                   </div>
                 </button>
               </div>
@@ -116,7 +116,7 @@ export default function AudienceSection() {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-2 lg:gap-x-8 gap-y-1 lg:gap-y-3 mb-5 lg:mb-9">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center space-x-3">
-                  <CheckCircleIcon className="w-5 h-5 text-[#E9A05D] flex-shrink-0" />
+                  <SealCheckIcon  className="w-5 h-5 text-[#E9A05D] flex-shrink-0" />
                   <span className="text-gray-600 text-xs font-medium">
                     {feature}
                   </span>
@@ -131,7 +131,7 @@ export default function AudienceSection() {
                   Schedule a CFO-Level Financial Review
                 </span>
                 <div className="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform duration-300">
-                  <ArrowRight className="w-4 h-4 text-[#3A9B94]" />
+                  <CaretRightIcon  className="w-4 h-4 text-[#3A9B94]" />
                 </div>
               </button>
             </div>
