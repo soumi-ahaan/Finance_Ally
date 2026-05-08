@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { 
-  Book, 
-  Bank, 
+
+  BankIcon , 
   Users, 
   FileText, 
   ChartLineUp, 
   Gear, 
-  TreeStructure,
   FileSearchIcon,
   CaretRightIcon ,
-
-  SealCheckIcon
+  SealCheckIcon,
+  BookOpenTextIcon,
+  TreeIcon
 } from "@phosphor-icons/react";
 
 export const ManagementSection = () => {
@@ -27,14 +27,14 @@ export const ManagementSection = () => {
   ];
 
   const nodes = [
-    { label: "Books", icon: <Book weight="light" />, angle: -90 },
-    { label: "Cash Flow", icon: <Bank weight="light" />, angle: -45 },
+    { label: "Books", icon: <BookOpenTextIcon  weight="light" />, angle: -90 },
+    { label: "Cash Flow", icon: <BankIcon  weight="light" />, angle: -45 },
     { label: "Payroll", icon: <Users weight="light" />, angle: 0 },
     { label: "Taxes", icon: <FileText weight="light" />, angle: 45 },
     { label: "Profit", icon: <ChartLineUp weight="light" />, angle: 90 },
     { label: "Compliance", icon: <FileSearchIcon weight="light" />, angle: 135 },
     { label: "Accountability", icon: <Gear weight="light" />, angle: 180 },
-    { label: "Living Legacy", icon: <TreeStructure weight="light" />, angle: 225 },
+    { label: "Living Legacy", icon: <TreeIcon  weight="light" />, angle: 225 },
   ];
 
  
@@ -161,7 +161,7 @@ export const ManagementSection = () => {
       >
         
         {/* 1. The Central Hub */}
-        <div className="z-30 w-32 h-32 lg:w-44 lg:h-44 rounded-full bg-[#F4A261] flex items-center justify-center text-center p-4 shadow-2xl border-4 border-[#1F7180]">
+        <div className="z-30 w-32 h-32 lg:w-44 lg:h-44 rounded-full bg-[#F4A261] flex items-center justify-center text-center p-4 shadow-2xl border border-dashed border-[#ffffff]">
           <span className="text-[#FFFFFF] font-extrabold leading-tight text-sm lg:text-xl uppercase tracking-tighter">
             Whole <br /> Finance <br /> Approach
           </span>
@@ -169,7 +169,7 @@ export const ManagementSection = () => {
 
         {/* 2. The Orbit Ring */}
         <div 
-          className="absolute border border-dashed border-white/20 rounded-full pointer-events-none transition-all" 
+          className="absolute border border-dashed border-white rounded-full pointer-events-none transition-all" 
           style={{ width: radius * 2, height: radius * 2 }} 
         />
 
@@ -184,7 +184,7 @@ export const ManagementSection = () => {
               <React.Fragment key={i}>
                 {/* Spoke Line */}
                 <div 
-                  className="absolute h-px border-t border-dashed border-white/30 pointer-events-none block"
+                  className="absolute h-px border-t border-dashed border-white pointer-events-none block"
                   style={{
                     width: `${radius - hub}px`,
                     left: "0px",
@@ -204,13 +204,8 @@ export const ManagementSection = () => {
                   }}
                 >
                  <span className={`
-  /* Common Styles */
   absolute whitespace-nowrap text-white font-bold uppercase tracking-widest transition-all group-hover:text-[#F4A261]
-  
-  /* DEFAULT (Mobile, Tablet, Laptop): Label is BOTTOM */
   text-[9px] top-15 left-1/2 -translate-x-1/2 text-center
-  
-  /* XL ONLY: Radial positioning logic (Side/Top/Bottom) */
   ${node.angle > 90 || node.angle < -90 
     ? 'xl:top-auto xl:left-auto xl:translate-x-0 xl:right-16 xl:text-right xl:text-[11px]' // Left nodes
     : node.angle === -90 
@@ -224,7 +219,7 @@ export const ManagementSection = () => {
 </span>
 
                   {/* Node Circle - Scaled for mobile */}
-                  <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-full bg-[#1F7180] border-2 border-dashed border-white/40 flex items-center justify-center text-white shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:border-solid group-hover:bg-[#F4A261] group-hover:text-[#1F7180] cursor-pointer">
+                  <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-full bg-[#1F7180] border border-dashed border-white flex items-center justify-center text-white shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:border-solid group-hover:bg-[#F4A261] group-hover:text-[#1F7180] cursor-pointer">
                     {React.cloneElement(node.icon, { size: scale < 1 ? 18 : 24 })}
                   </div>
                 </div>
