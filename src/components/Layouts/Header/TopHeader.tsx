@@ -9,26 +9,26 @@ import {
 
 const TopHeader = () => {
   return (
-    <div className="w-full bg-[#0f4d5a] text-white ">
-      <div className="max-w-[1440px] mx-auto px-4 lg:px-8">
+    <div className=" bg-[#123F4E] text-white ">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 xl:px-[70px]">
         <div className="flex items-center justify-between h-[42px]">
           
           {/* Left Side */}
-          <div className="hidden lg:flex items-center gap-8 text-[13px] font-medium">
+          <div className="hidden lg:flex items-center gap-10 text-sm font-medium">
             
             <div className="flex items-center gap-2">
               <EnvelopeSimple size={14} weight="fill" />
-              <span>bookkeeping@finanzaccounting.com</span>
+              <a href="mailto:bookkeeping@finanzaccounting.com" target="_blank" className="cursor-pointer">bookkeeping@finanzaccounting.com</a>
             </div>
 
             <div className="flex items-center gap-2">
               <Phone size={14} weight="fill" />
-              <span>7755509999</span>
+              <a href="tel:7755509999" target="_blank" className="cursor-pointer">7755509999</a>
             </div>
 
             <div className="flex items-center gap-2">
               <MapPin size={14} weight="fill" />
-              <span>P.O. Box 980, Verdi, NV 89439</span>
+              <a href="https://maps.app.goo.gl/9cWAhmm4JSJKJFCr5" target="_blank" className="cursor-pointer">P.O. Box 980, Verdi, NV 89439</a>
             </div>
           </div>
 
@@ -42,23 +42,23 @@ const TopHeader = () => {
             
             <a
               href="#"
-              className="w-7 h-7 rounded-full bg-white text-[#0f4d5a] flex items-center justify-center hover:scale-105 duration-300"
+              className="w-7 h-7 rounded-full bg-white text-[#0f4d5a] flex items-center justify-center hover:scale-105 duration-300 p-1"
             >
-              <FacebookLogo size={14} weight="fill" />
+              <FacebookLogo  weight="fill" />
             </a>
 
             <a
               href="#"
-              className="w-7 h-7 rounded-full bg-white text-[#0f4d5a] flex items-center justify-center hover:scale-105 duration-300"
+              className="w-7 h-7 rounded-full bg-white text-[#0f4d5a] flex items-center justify-center hover:scale-105 duration-300 p-1"
             >
-              <LinkedinLogo size={14} weight="fill" />
+              <LinkedinLogo  weight="fill" />
             </a>
 
             <a
               href="#"
-              className="w-7 h-7 rounded-full bg-white text-[#0f4d5a] flex items-center justify-center hover:scale-105 duration-300"
+              className="w-7 h-7 rounded-full bg-white text-[#0f4d5a] flex items-center justify-center hover:scale-105 duration-300 p-1"
             >
-              <InstagramLogo size={14} weight="fill" />
+              <InstagramLogo  weight="fill" />
             </a>
           </div>
         </div>
