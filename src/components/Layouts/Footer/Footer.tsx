@@ -9,7 +9,7 @@ import {
   EnvelopeSimpleOpen,
 } from "@phosphor-icons/react";
 
-import logo2 from "../../../assets/footer_logo.png";
+import logo2 from "../../../assets/logo.png";
 
 const Footer: React.FC = () => {
 

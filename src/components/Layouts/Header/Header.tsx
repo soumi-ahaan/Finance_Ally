@@ -6,7 +6,7 @@ import {
   ArrowRight, CaretRightIcon
 } from "@phosphor-icons/react";
 
-import logo from "../../../assets/Company_Logo.png";
+import logo from "../../../assets/logo.png";
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <header className="bg-black sticky top-0 z-50 border-b border-[#1a1a1a] py-2.5">
-      <div className="max-w-[1440px]mx-auto px-4 md:px-8 lg:px-12 xl:px-[70px]">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 xl:px-[70px]">
         <div className="flex items-center justify-between h-[82px] xl:gap-[90px]">
           {/* Logo */}
           <Link to="/">
