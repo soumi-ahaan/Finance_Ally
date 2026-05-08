@@ -5,6 +5,7 @@ import { HeroBanner } from "./HeroBanner"
 import { ManagementSection } from "./ManagementSection"
 import OurServices from "./OurServices"
 import { StatBanner } from "./StatBanner"
+import ContactForm from "./ContactForm"
 
 
 
@@ -18,6 +19,7 @@ const HomeComponent = () => {
         <AudienceSection/>
         <ManagementSection/>
         <CallToAction/>
+        <ContactForm/>
        
     </div>
   )
