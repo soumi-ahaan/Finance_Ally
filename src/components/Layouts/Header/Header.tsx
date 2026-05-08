@@ -50,19 +50,19 @@ const Header = () => {
             <img
               src={logo}
               alt="logo"
-              className="w-[180px] md:w-[220px] object-contain"
+              className="w-[180px] xl:w-[220px] object-contain"
             />
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex items-center gap-4 py-2.5">
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-4 py-2.5">
             {/* Home */}
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
-                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-2 2xl:px-2.5 py-3"
+                  : "text-white text-sm 2xl:text-base px-2 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
 
             >
@@ -74,8 +74,8 @@ const Header = () => {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
-                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-2 2xl:px-2.5 py-3"
+                  : "text-white text-sm 2xl:text-base px-2 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               About
@@ -89,7 +89,7 @@ const Header = () => {
               >
                 {/* Menu Title */}
                 <div className="flex items-center gap-1 cursor-pointer">
-                  <span className="text-white group-hover:text-[#1F7180] hover:font-bold hover:font-bold duration-300 text-base px-2.5 py-3">
+                  <span className="text-white group-hover:text-[#1F7180] hover:font-bold hover:font-bold duration-300 text-sm xl:text-base px-2 xl:px-2.5 py-3">
                     {item.title}
                   </span>
 
@@ -128,8 +128,8 @@ const Header = () => {
               to="/who-we-serve"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
-                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-2 2xl:px-2.5 py-3"
+                  : "text-white text-sm 2xl:text-base px-2 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               Who We Serve
@@ -140,8 +140,8 @@ const Header = () => {
               to="/money-medic"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
-                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-2 2xl:px-2.5 py-3"
+                  : "text-white text-sm 2xl:text-base px-2 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               Money Medic
@@ -152,8 +152,8 @@ const Header = () => {
               to="/resources"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
-                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm xl:text-base px-2 xl:px-2.5 py-3"
+                  : "text-white text-sm xl:text-base px-2 xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               Resources
@@ -164,8 +164,8 @@ const Header = () => {
               to="/contact"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-base px-2.5 py-3"
-                  : "text-white text-base px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm xl:text-base px-2 xl:px-2.5 py-3"
+                  : "text-white text-sm xl:text-base px-2 xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               Contact
@@ -174,7 +174,7 @@ const Header = () => {
 
           {/* CTA */}
           <div className="hidden lg:flex">
-            <button className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-7 pr-3 py-2.5 flex items-center gap-3 font-semibold text-base">
+            <button className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full pl-5 pr-3 py-2  2xl:pl-7 2xl:pr-3 2xl:py-2.5 flex items-center gap-3 font-semibold text-base">
               Book Now
 
               <div className="w-8 h-8 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">
