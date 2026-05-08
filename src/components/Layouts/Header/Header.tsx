@@ -106,7 +106,7 @@ const Header = () => {
                     {item.links.map((link, i) => (
                       <Link
                         key={i}
-                        to={link.path}
+                        to={link.path} 
                         className="group/item flex items-center justify-between rounded-xl px-4 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
                       >
                         <span>{link.name}</span>
@@ -231,6 +231,7 @@ const Header = () => {
     <div key={index} className="relative">
       {/* Menu Title */}
       <div
+      
         onClick={() =>
           setOpenIndex(isOpen ? null : index)
         }
@@ -263,6 +264,10 @@ const Header = () => {
               <Link
                 key={i}
                 to={link.path}
+                onClick={() => {
+            setMobileMenu(false);
+           
+          }}
                 className="flex items-center justify-between rounded-sm px-2 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
               >
                 <span>{link.name}</span>
