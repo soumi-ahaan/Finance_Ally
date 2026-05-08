@@ -86,8 +86,14 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Middle Section */}
-        <div className="w-full bg-[#1F1F1F] rounded-[2px] px-6 sm:px-8 lg:px-[28px] py-[45px]">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-4 gap-y-10">
+        <div className="bg-[#1F1F1F] w-screen relative left-1/2 right-1/2 -translate-x-1/2 lg:w-full lg:left-0 lg:right-0 lg:translate-x-0 rounded-none 
+                lg:rounded-[2px] px-6 sm:px-8 lg:px-[28px] py-[33px]">
+          <div className="grid 
+                grid-cols-1 
+                sm:grid-cols-2 
+                lg:grid-cols-[1fr_1fr_1.37fr_0.8fr_1.25fr] 
+                gap-y-[65px] 
+                lg:gap-x-[45px]">
 
             {/* Quick Links */}
             <div>
@@ -95,7 +101,7 @@ const Footer: React.FC = () => {
                 Quick Links
               </h3>
 
-              <ul className="flex flex-col gap-[28px]">
+              <ul className="flex flex-col gap-[20px]">
                 {[
                   { name: "Home", link: "/" },
                   { name: "About Us", link: "/about" },
@@ -122,7 +128,7 @@ const Footer: React.FC = () => {
                 Our Services
               </h3>
 
-              <ul className="flex flex-col gap-[28px]">
+              <ul className="flex flex-col gap-[20px]">
                 {[
                   { name: "Keeper Of Books", link: "/keeper-of-books" },
                   { name: "Tax Preparedness", link: "/tax-preparedness" },
@@ -147,7 +153,7 @@ const Footer: React.FC = () => {
                 Our Address
               </h3>
 
-              <ul className="space-y-7">
+              <ul className="space-y-3">
                 <li>
                   <a
                     href="https://maps.google.com"
@@ -213,7 +219,7 @@ const Footer: React.FC = () => {
                 Resources
               </h3>
 
-              <ul className="flex flex-col gap-[28px]">
+              <ul className="flex flex-col gap-[20px]">
                 {[
                   { name: "Checklists", link: "/checklists" },
                   { name: "Articles", link: "/articles" },
