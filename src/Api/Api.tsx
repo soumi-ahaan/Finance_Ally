@@ -58,7 +58,7 @@ export type ContactFormData = {
   email: string;
   phone: string;
   business_owner_or_family_office: string;
-  support_needed: string;
+  support_needed: string[];
   books_current: string;
   accounting_system: string;
   message: string;
