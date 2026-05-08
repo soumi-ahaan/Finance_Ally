@@ -41,6 +41,7 @@ const AboutSection = () => {
 
                 {/* Right Side: Content */}
                 <div className="flex flex-col">
+                    <div className="w-12 h-[2px] bg-[#F4A261] mb-2 lg:mb-[14px]" />
                     <span className="italic text-[#E9A05D] text-lg font-highlight font-serif">About Us</span>
                     <h1 className="text-[26px] lg:text-[38px] font-heading font-bold text-[#123F4E] mt-2 mb-3 lg:mb-6">
                         Meet Your FinanZAlly
