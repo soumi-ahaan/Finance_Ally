@@ -6,12 +6,12 @@ export const HeroBanner = () => {
     <section className="overflow-hidden relative w-full max-h-[666px] bg-[#E6F4F6] flex items-center justify-center overflow-hidde">
 
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-2 lg:gap-3 xl:gap-10">
-         <div className="h-[450px] lg:h-[500px] xl:h-[666px] relative flex justify-center items-center">
+         <div className=" h-15 md:h-[450px] lg:h-[500px] xl:h-[666px] relative flex justify-center items-center">
           <img
             src="/banner-sidbar.png"
-            className="absolute bottom-0 left-0"
+            className="hidden md:block absolute bottom-0 left-0"
           />
-          <div className="relative w-45 h-45 lg:w-65 lg:h-65 xl:w-78 xl:h-78 z-10 top-0 xl:top-10 left-2">
+          <div className="hidden md:block relative w-45 h-45 lg:w-65 lg:h-65 xl:w-78 xl:h-78 z-10 top-0 xl:top-10 left-2">
             <img
               src="/banner-logo-1.png"
               alt="Professional working"
@@ -23,7 +23,7 @@ export const HeroBanner = () => {
         <div className="w-full text-center flex flex-col items-center">
           <div className="flex items-center gap-2 mb-4">
             <span className="h-[1px] w-8 bg-orange-400"></span>
-            <span className="text-orange-400 font-highlight font-medium italic">Whole Finance Support</span>
+            <span className="text-orange-400 font-highlight font-bold italic">Whole Finance Support</span>
           </div>
           <h1 className="text-[24px] md:text-[32px] lg:text-[42px] xl:text-[54px] font-heading font-bold text-[#1A2E35] leading-tight">
             Your <span className="text-[#329696]">Finance Ally</span> for Business Owners & Family Offices
@@ -49,12 +49,12 @@ export const HeroBanner = () => {
             </button>
           </div>
         </div>
-        <div className="h-[450px] lg:h-[500px] xl:h-[666px] relative flex justify-center items-center">
+        <div className="h-15 md:h-[450px] lg:h-[500px] xl:h-[666px] relative flex justify-center items-center">
           <img
             src="/banner-sidbar.png"
-            className="absolute top-0 right-0 rotate-180"
+            className="hidden md:block absolute top-0 right-0 rotate-180"
           />
-          <div className="relative  w-45 h-45 lg:w-65 lg:h-65 xl:w-78 xl:h-78 z-10 top-0 xl:-top-10 right-2">
+          <div className="hidden md:block relative  w-45 h-45 lg:w-65 lg:h-65 xl:w-78 xl:h-78 z-10 top-0 xl:-top-10 right-2">
             <img
               src="banner-logo-2.png"
               alt="Consulting"

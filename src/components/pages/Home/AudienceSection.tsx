@@ -40,7 +40,7 @@ export default function AudienceSection() {
     <section className="py-14 lg:py-20 bg-[#f5f5f5]">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
           {audienceData.map((item) => (
             <div
               key={item.id}
@@ -100,7 +100,7 @@ export default function AudienceSection() {
           {/* Left Side: Content */}
           <div className="flex flex-col ">
             <div className="w-12 h-[2px] bg-[#E9A05D] mb-2 lg:mb-[14px]" />
-            <span className="italic text-[#E9A05D] text-lg font-serif">Fractional CFO</span>
+            <span className="font-highlight italic text-[#E9A05D] text-lg font-bold">Fractional CFO</span>
 
             <h2 className="text-[24px] lg:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight">
               Fractional CFO Support Without <br className="hidden lg:block" />
