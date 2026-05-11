@@ -23,7 +23,7 @@ export const HeroBanner = () => {
         <div className="w-full text-center flex flex-col items-center">
           <div className="flex items-center gap-2 mb-4">
             <span className="h-[1px] w-8 bg-orange-400"></span>
-            <span className="text-orange-400 font-highlight font-medium italic">Whole Finance Support</span>
+            <span className="text-orange-400 font-highlight font-bold italic">Whole Finance Support</span>
           </div>
           <h1 className="text-[24px] md:text-[32px] lg:text-[42px] xl:text-[54px] font-heading font-bold text-[#1A2E35] leading-tight">
             Your <span className="text-[#329696]">Finance Ally</span> for Business Owners & Family Offices

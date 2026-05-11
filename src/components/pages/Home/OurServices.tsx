@@ -78,7 +78,7 @@ const OurServices = () => {
     </div>
 
     {/* Services Cards Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-7">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-7">
       {services.map((service) => {
         const featuredImage =
           service._embedded?.["wp:featuredmedia"]?.[0]?.source_url;

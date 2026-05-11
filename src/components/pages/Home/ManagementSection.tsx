@@ -77,7 +77,7 @@ export const ManagementSection = () => {
                 {/* Right Side: Content */}
                 <div className="flex flex-col text-white">
                     <div className="w-12 h-[2px] bg-[#F4A261] mb-2 lg:mb-[14px]" />
-                    <span className="italic text-[#F4A261] text-lg font-serif">
+                    <span className="font-highlight italic text-[#F4A261] text-lg font-bold">
                         WealthCare™ Management
                     </span>
 
@@ -121,7 +121,7 @@ export const ManagementSection = () => {
                 {/* Left Side Content */}
                 <div className="text-white">
                     <div className="w-12 h-[2px] bg-[#F4A261] mb-2 lg:mb-[14px]" />
-                    <span className="italic text-[#F4A261] text-xl font-serif">Our Approach</span>
+                    <span className="font-highlight italic text-[#F4A261] text-xl font-bold">Our Approach</span>
                     <h2 className="text-[24px] lg:text-[38px] font-bold text-[#FFFFFF] mt-2 mb-3 leading-tight">
                         More Than Bookkeeping.<br />Whole Finance.
                     </h2>
