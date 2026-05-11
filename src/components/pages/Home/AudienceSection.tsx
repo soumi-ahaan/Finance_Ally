@@ -40,7 +40,7 @@ export default function AudienceSection() {
     <section className="py-14 lg:py-20 bg-[#f5f5f5]">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
           {audienceData.map((item) => (
             <div
               key={item.id}

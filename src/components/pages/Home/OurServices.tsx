@@ -39,7 +39,7 @@ const OurServices = () => {
         <div className="flex items-center gap-3 mb-5">
           <div className="w-10 h-[2px] bg-[#f4a261]"></div>
 
-          <span className="text-[#f4a261] italic text-[18px] lg:text-[20px] font-medium font-highlight tracking-wide">
+          <span className="text-[#f4a261] italic text-[18px] lg:text-[20px] font-bold font-highlight tracking-wide">
             Our Services
           </span>
         </div>
@@ -78,7 +78,7 @@ const OurServices = () => {
     </div>
 
     {/* Services Cards Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-7">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6">
       {services.map((service) => {
         const featuredImage =
           service._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
