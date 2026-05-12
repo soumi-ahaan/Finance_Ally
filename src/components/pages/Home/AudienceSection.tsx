@@ -1,4 +1,4 @@
-import { CaretRightIcon , SealCheckIcon  } from "@phosphor-icons/react";
+import { CaretRightIcon, SealCheckIcon } from "@phosphor-icons/react";
 
 const audienceData = [
   {
@@ -83,13 +83,10 @@ export default function AudienceSection() {
                     {item.buttonText}
                   </span>
 
-                  <div
-                    className="w-9 h-9 rounded-full bg-white text-[#1f2d38] 
-                    flex items-center justify-center shrink-0
-                    group-hover/btn:translate-x-1 transition-transform duration-300"
-                  >
-                    <CaretRightIcon  size={18} weight="bold" />
-                  </div>
+                 
+                  <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0 group-hover/btn:translate-x-1 transition-transform duration-300">
+                                    <CaretRightIcon size={14} weight="bold" />
+                                </div>
                 </button>
               </div>
             </div>
@@ -99,10 +96,10 @@ export default function AudienceSection() {
 
           {/* Left Side: Content */}
           <div className="flex flex-col ">
-            <div className="w-12 h-[2px] bg-[#E9A05D] mb-2 lg:mb-[14px]" />
-            <span className="font-highlight italic text-[#E9A05D] text-lg font-bold">Fractional CFO</span>
+            <div className="w-12 h-[2px] bg-[#F4A261] mb-2 lg:mb-[14px]" />
+            <span className="font-highlight italic text-[#F4A261] text-md md:text-2xl font-bold font-highlight">Fractional CFO</span>
 
-            <h2 className="text-[24px] lg:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight">
+            <h2 className="text-[24px] lg:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight font-heading">
               Fractional CFO Support Without <br className="hidden lg:block" />
               the Full-Time CFO Cost
             </h2>
@@ -116,7 +113,7 @@ export default function AudienceSection() {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-2 lg:gap-x-8 gap-y-1 lg:gap-y-3 mb-5 lg:mb-9">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center space-x-3">
-                  <SealCheckIcon  className="w-5 h-5 text-[#E9A05D] flex-shrink-0" />
+                  <SealCheckIcon className="w-5 h-5 text-[#F4A261] flex-shrink-0" />
                   <span className="text-gray-600 text-xs font-medium">
                     {feature}
                   </span>
@@ -126,13 +123,14 @@ export default function AudienceSection() {
 
             {/* CTA Button */}
             <div>
-              <button className="group flex items-center space-x-4 bg-[#3A9B94] hover:bg-[#2d7a74] text-white py-3 px-6 rounded-full transition-all duration-300 shadow-lg">
-                <span className="font-semibold text-sm tracking-wide">
+              <button
+                className="group/btn bg-[#2B9896] hover:bg-transparent  hover:shadow-[0px_0px_10px_1px_#00000026]  duration-300 text-white rounded-full  pl-5 pr-3 py-2 lg:pl-7 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
+                <span className="text-white text-xs sm:text-sm md:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
                   Schedule a CFO-Level Financial Review
                 </span>
-                <div className="bg-white rounded-full p-1 group-hover:translate-x-1 transition-transform duration-300">
-                  <CaretRightIcon  className="w-4 h-4 text-[#3A9B94]" />
-                </div>
+                <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white text-[#2B9896] flex items-center justify-center shrink-0 group-hover/btn:bg-[#2B9896] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-transform duration-300">
+                                    <CaretRightIcon size={14} weight="bold" />
+                                </div>
               </button>
             </div>
           </div>

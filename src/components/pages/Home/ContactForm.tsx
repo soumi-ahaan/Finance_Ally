@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import {
   CaretDown,CaretRightIcon
@@ -91,6 +91,36 @@ const supportOptions = [
   "WealthCare Management",
 ];
 
+const supportRef =
+  useRef<HTMLDivElement | null>(null);
+
+useEffect(() => {
+  const handleClickOutside = (
+    event: MouseEvent
+  ) => {
+    if (
+      supportRef.current &&
+      !supportRef.current.contains(
+        event.target as Node
+      )
+    ) {
+      setSupportOpen(false);
+    }
+  };
+
+  document.addEventListener(
+    "mousedown",
+    handleClickOutside
+  );
+
+  return () => {
+    document.removeEventListener(
+      "mousedown",
+      handleClickOutside
+    );
+  };
+}, []);
+
   return (
     <section className="bg-[#F6F6F6] ">
       <div className="max-w-[1440px] mx-auto">
@@ -134,11 +164,11 @@ const supportOptions = [
                     message: "Only letters are allowed",
                   },
                 })}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-3 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
 
               {errors.name && (
-                <p className="text-red-500 ">{errors.name.message}</p>
+                <p className="text-xs ml-5 md:text-sm text-red-500 ">{errors.name.message}</p>
               )}
             </div>
 
@@ -150,7 +180,7 @@ const supportOptions = [
                 {...register(
                   "business_family_office_name"
                 )}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-3 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
             </div>
 
@@ -167,11 +197,11 @@ const supportOptions = [
                     message: "Invalid email",
                   },
                 })}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-3 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
 
               {errors.email && (
-                <p className="text-red-500">{errors.email.message}</p>
+                <p className="text-xs ml-5 md:text-sm text-red-500">{errors.email.message}</p>
               )}
             </div>
 
@@ -253,11 +283,11 @@ const supportOptions = [
                   setValue("phone", paste.slice(0, 15));
                 }}
 
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-3 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
 
               {errors.phone && (
-                <p className="text-red-500">{errors.phone.message}</p>
+                <p className="text-xs ml-5 md:text-sm text-red-500">{errors.phone.message}</p>
               )}
             </div>
 
@@ -269,17 +299,17 @@ const supportOptions = [
                 {...register(
                   "business_owner_or_family_office"
                 )}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-3 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
             </div>
             {/* SUPPORT */}
-<div className="relative">
+<div className="relative" ref={supportRef}>
   
   <div
     onClick={() =>
       setSupportOpen(!supportOpen)
     }
-    className="w-full bg-white border border-[#D9D9D9] rounded-full p-3 md:p-5 text-xs md:text-base outline-none cursor-pointer flex items-center justify-between"
+    className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none cursor-pointer flex items-center justify-between"
   >
     <span
   className={`${
@@ -303,7 +333,7 @@ const supportOptions = [
   </div>
 
   {supportOpen && (
-    <div className="absolute z-20 mt-2 left-5 w-[60%] bg-white border border-[#D9D9D9] rounded-[24px] shadow-lg p-4 flex flex-col gap-3">
+    <div className="absolute z-20 mt-2 left-5 w-[60%] bg-white border border-[#D9D9D9] rounded-lg shadow-lg p-4 flex flex-col gap-3">
       
       {supportOptions.map(
         (option) => (
@@ -334,7 +364,7 @@ const supportOptions = [
                 {...register(
                   "books_current"
                 )}
-                className={`w-full appearance-none bg-white border border-[#D9D9D9] rounded-full p-3 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]
+                className={`w-full appearance-none bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]
                   ${
       watch("books_current")
         ? "text-gray-700"
@@ -374,7 +404,7 @@ const supportOptions = [
                 {...register(
                   "accounting_system"
                 )}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-3 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
             </div>
 
@@ -386,7 +416,7 @@ const supportOptions = [
                 {...register(
                   "message"
                 )}
-                className="w-full resize-none bg-white border border-[#D9D9D9] rounded-[25px] p-3 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full resize-none bg-white border border-[#D9D9D9] rounded-xl lg:rounded-[25px] p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               ></textarea>
             </div>
 

@@ -197,17 +197,18 @@ const Header = () => {
 
       {/* OFF-CANVAS MENU */}
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] bg-white shadow-lg z-50 transform transition-transform duration-300 ${mobileMenu ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-screen w-[280px] bg-black shadow-lg z-50 overflow-y-auto scrollbar-hide transform transition-transform duration-300 ${mobileMenu ? "translate-x-0" : "translate-x-full"
           }`}
-      ><button onClick={() => setMobileMenu(false)} className="ml-6 my-6 py-1 px-2.5 text-xl left-0 bg-[#1F6B5A] text-white rounded-full">✕</button>
+      ><button onClick={() => setMobileMenu(false)} className="ml-6 my-6 py-1 px-2.5 text-xl left-0 bg-[#2B9896] text-white rounded-full">✕</button>
         <div className=" flex flex-col gap-2">
 
           <NavLink
             to="/" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
+                
             }
           >
             Home
@@ -216,8 +217,8 @@ const Header = () => {
             to="/about" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
             About
@@ -235,7 +236,7 @@ const Header = () => {
         onClick={() =>
           setOpenIndex(isOpen ? null : index)
         }
-        className="flex items-center justify-between gap-1 cursor-pointer text-[#1F7180] hover:bg-[#1F7180] hover:text-white text-base px-6 py-3"
+        className="flex items-center justify-between gap-1 cursor-pointer text-[#2B9896] hover:bg-[#2B9896] hover:text-white text-base px-6 py-3"
       >
         <span className="font-[550]">
           {item.title}
@@ -258,7 +259,7 @@ const Header = () => {
             : "max-h-0 opacity-0"
         }`}
       >
-        <div className="min-w-[50px] bg-[#1F7180] rounded-sm p-2 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
+        <div className="min-w-[50px] bg-[#2B9896] rounded-sm p-2 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
           <div className="flex flex-col gap-1">
             {item.links.map((link, i) => (
               <Link
@@ -288,8 +289,8 @@ const Header = () => {
             to="/who-we-serve" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
             Who We Serve
@@ -298,8 +299,8 @@ const Header = () => {
             to="/money-medic" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
             Money Medic
@@ -308,8 +309,8 @@ const Header = () => {
             to="/resources" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
            Resources
@@ -318,8 +319,8 @@ const Header = () => {
             to="/contact" onClick={() => setMobileMenu(false)} 
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
            Contact
