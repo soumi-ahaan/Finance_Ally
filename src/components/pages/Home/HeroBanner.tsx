@@ -14,7 +14,7 @@ export const HeroBanner = () => {
     }}
   ></div>
 
-      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between m-0 gap-2 lg:gap-3 xl:gap-10 px-4 md:px-0">
+      <div className="max-w-[1440px] z-10 mx-auto flex flex-col md:flex-row items-center justify-between m-0 gap-2 lg:gap-3 xl:gap-10 px-4 md:px-0">
          <div className=" h-15 md:h-[450px] lg:h-[500px] xl:h-[666px] relative flex justify-center items-center">
           <img
             src="/banner-sidbar.png"

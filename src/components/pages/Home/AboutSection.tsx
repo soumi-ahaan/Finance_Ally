@@ -14,7 +14,13 @@ const AboutSection = () => {
     ];
 
     return (
-        <section className="max-w-[1440px] mx-auto py-16 px-6 md:px-8 lg:px-12 xl:px-[70px] bg-white font-sans">
+        <section className="relative max-w-[1440px] mx-auto py-16 px-6 md:px-8 lg:px-12 xl:px-[70px] bg-white font-sans">
+             <div
+    className="absolute inset-0 bg-cover bg-center opacity-5"
+    style={{
+      backgroundImage: "url('./about-banner.jpg')",
+    }}
+  ></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div className="relative group overflow-bottom-hidden">
                     <div className="rounded-lg">
