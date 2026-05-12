@@ -85,7 +85,7 @@ export const ManagementSection = () => {
                         WealthCare™ Management
                     </h2>
 
-                    <p className="text-white text-sm lg:text-base mb-3 lg:mb-4 leading-relaxed max-w-sm">
+                    <p className="text-white text-sm lg:text-base mb-3 lg:mb-4 leading-relaxed  max-w-xl">
                         WealthCare Management Is The Ongoing Care Of Your Financial Foundation —
                         Your Books, Cash Flow, Tax Preparedness, Accountability Systems, Reporting,
                         And Financial Decision Support.
@@ -201,7 +201,7 @@ export const ManagementSection = () => {
                                                 transform: 'translate(-50%, -50%)'
                                             }}
                                         >
-                                            <span className={`absolute whitespace-nowrap text-white font-bold uppercase tracking-widest transition-all  text-[9px] top-15 left-1/2 -translate-x-1/2 text-center ${node.angle > 90 || node.angle < -90
+                                            <span className={`absolute whitespace-nowrap text-white font-bold uppercase tracking-widest transition-all  text-[8px] top-15 left-1/2 -translate-x-1/2 text-center ${node.angle > 90 || node.angle < -90
                                                 ? 'xl:top-auto xl:left-auto xl:translate-x-0 xl:right-16 xl:text-right xl:text-[11px]' // Left nodes
                                                 : node.angle === -90
                                                     ? 'xl:top-auto xl:left-1/2 xl:-translate-x-1/2 xl:bottom-16 xl:text-[11px]'           // Top node
