@@ -61,8 +61,8 @@ const Header = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-2 2xl:px-2.5 py-3"
-                  : "text-white text-sm 2xl:text-base px-2 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-1 2xl:px-2.5 py-3"
+                  : "text-white text-sm 2xl:text-base px-1 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
 
             >
@@ -74,8 +74,8 @@ const Header = () => {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-2 2xl:px-2.5 py-3"
-                  : "text-white text-sm 2xl:text-base px-2 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-1 2xl:px-2.5 py-3"
+                  : "text-white text-sm 2xl:text-base px-1 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               About
@@ -89,7 +89,7 @@ const Header = () => {
               >
                 {/* Menu Title */}
                 <div className="flex items-center gap-1 cursor-pointer">
-                  <span className="text-white group-hover:text-[#1F7180] hover:font-bold hover:font-bold duration-300 text-sm xl:text-base px-2 xl:px-2.5 py-3">
+                  <span className="text-white group-hover:text-[#1F7180] hover:font-bold hover:font-bold duration-300 text-sm xl:text-base px-1 xl:px-2.5 py-3">
                     {item.title}
                   </span>
 
@@ -128,8 +128,8 @@ const Header = () => {
               to="/who-we-serve"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-2 2xl:px-2.5 py-3"
-                  : "text-white text-sm 2xl:text-base px-2 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-1 2xl:px-2.5 py-3"
+                  : "text-white text-sm 2xl:text-base px-1 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               Who We Serve
@@ -140,8 +140,8 @@ const Header = () => {
               to="/money-medic"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-2 2xl:px-2.5 py-3"
-                  : "text-white text-sm 2xl:text-base px-2 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-1 2xl:px-2.5 py-3"
+                  : "text-white text-sm 2xl:text-base px-1 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               Money Medic
@@ -152,8 +152,8 @@ const Header = () => {
               to="/resources"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-sm xl:text-base px-2 xl:px-2.5 py-3"
-                  : "text-white text-sm xl:text-base px-2 xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm xl:text-base px-1 xl:px-2.5 py-3"
+                  : "text-white text-sm xl:text-base px-1 xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               Resources
@@ -164,8 +164,8 @@ const Header = () => {
               to="/contact"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#1F7180] font-bold text-sm xl:text-base px-2 xl:px-2.5 py-3"
-                  : "text-white text-sm xl:text-base px-2 xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
+                  ? "text-[#1F7180] font-bold text-sm xl:text-base px-1 xl:px-2.5 py-3"
+                  : "text-white text-sm xl:text-base px-1 xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
             >
               Contact

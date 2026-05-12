@@ -65,19 +65,19 @@ export default function AudienceSection() {
               <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 lg:px-10 py-10">
 
                 {/* Title */}
-                <h2 className="text-white text-2xl sm:text-[38px] leading-[1.1] font-bold mb-5">
+                <h2 className="text-white text-2xl sm:text-3xl xl:text-[38px] leading-[1.1] font-bold mb-5">
                   {item.title}
                 </h2>
 
                 {/* Description */}
-                <p className="text-white/95 text-sm sm:text-lg leading-[1.8] font-semibold max-w-[520px] mb-8">
+                <p className="text-white/95 text-sm sm:text-base leading-[1.8] font-semibold max-w-[520px] mb-8">
                   {item.description}
                 </p>
 
                 {/* Button */}
                 <button
                 className="group/btn bg-transparent border border-white hover:bg-white  duration-300 text-white rounded-full  pl-5 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
-                <span className="text-white text-xs sm:text-sm md:text-base font-semibold group-hover/btn:text-[#123F4E] transition-colors duration-300">
+                <span className="text-white text-xs sm:text-sm lg:text-base font-semibold group-hover/btn:text-[#123F4E] transition-colors duration-300">
                   {item.buttonText}
                   </span>
 
@@ -95,9 +95,9 @@ export default function AudienceSection() {
           {/* Left Side: Content */}
           <div className="flex flex-col ">
             <div className="w-12 h-[2px] bg-[#F4A261] mb-2 lg:mb-[14px]" />
-            <span className="font-highlight italic text-[#F4A261] text-md md:text-2xl font-bold">Fractional CFO</span>
+            <span className="font-highlight italic text-[#F4A261] text-md md:text-xl xl:text-2xl font-bold">Fractional CFO</span>
 
-            <h2 className="text-2xl lg:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight font-heading">
+            <h2 className="text-2xl  xl:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight font-heading">
               Fractional CFO Support Without <br className="hidden lg:block" />
               the Full-Time CFO Cost
             </h2>
@@ -123,7 +123,7 @@ export default function AudienceSection() {
             <div>
               <button
                 className="group/btn bg-[#2B9896] hover:bg-transparent  hover:shadow-[0px_0px_10px_1px_#00000026]  duration-300 text-white rounded-full  pl-5 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
-                <span className="text-white text-xs sm:text-sm md:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
+                <span className="text-white text-xs sm:text-sm lg:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
                   Schedule a CFO-Level Financial Review
                 </span>
                 <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white text-[#2B9896] flex items-center justify-center shrink-0 group-hover/btn:bg-[#2B9896] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-transform duration-300">

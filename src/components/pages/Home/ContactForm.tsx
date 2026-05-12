@@ -124,16 +124,16 @@ useEffect(() => {
   return (
     <section className="bg-[#F6F6F6] ">
       <div className="max-w-[1440px] mx-auto">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 xl:gap-[30px] overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-[30px] overflow-hidden">
 
         {/* LEFT SIDE */}
-        <div className="bg-[#F5F5F5] py-[50px] px-4 md:px-8 lg:pl-12 xl:pl-[70px]">
+        <div className="bg-[#F5F5F5] py-[50px] px-4 md:pl-8 lg:pl-12 xl:pl-[70px]">
 
           {/* HEADING */}
           <div className="mb-8">
             <div className="flex flex-col items-start gap-3 mb-2">
                   <div className="w-10 h-[2px] bg-[#FFAC00]" />
-                  <p className="text-md md:text-2xl text-[#FFAC00] italic font-highlight font-bold">
+                  <p className="text-md md:text-xl xl:text-2xl text-[#FFAC00] italic font-highlight font-bold">
                     Contact Us
                   </p>
                 </div>
@@ -164,7 +164,7 @@ useEffect(() => {
                     message: "Only letters are allowed",
                   },
                 })}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 xl:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
 
               {errors.name && (
@@ -180,7 +180,7 @@ useEffect(() => {
                 {...register(
                   "business_family_office_name"
                 )}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 xl:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
             </div>
 
@@ -197,7 +197,7 @@ useEffect(() => {
                     message: "Invalid email",
                   },
                 })}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 xl:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
 
               {errors.email && (
@@ -283,7 +283,7 @@ useEffect(() => {
                   setValue("phone", paste.slice(0, 15));
                 }}
 
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 xl:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
 
               {errors.phone && (
@@ -299,7 +299,7 @@ useEffect(() => {
                 {...register(
                   "business_owner_or_family_office"
                 )}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 xl:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
             </div>
             {/* SUPPORT */}
@@ -309,7 +309,7 @@ useEffect(() => {
     onClick={() =>
       setSupportOpen(!supportOpen)
     }
-    className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none cursor-pointer flex items-center justify-between"
+    className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 xl:p-5 text-xs md:text-base outline-none cursor-pointer flex items-center justify-between"
   >
     <span
   className={`${
@@ -364,7 +364,7 @@ useEffect(() => {
                 {...register(
                   "books_current"
                 )}
-                className={`w-full appearance-none bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]
+                className={`w-full appearance-none bg-white border border-[#D9D9D9] rounded-full p-2.5 xl:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]
                   ${
       watch("books_current")
         ? "text-gray-700"
@@ -404,7 +404,7 @@ useEffect(() => {
                 {...register(
                   "accounting_system"
                 )}
-                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full bg-white border border-[#D9D9D9] rounded-full p-2.5 xl:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               />
             </div>
 
@@ -416,7 +416,7 @@ useEffect(() => {
                 {...register(
                   "message"
                 )}
-                className="w-full resize-none bg-white border border-[#D9D9D9] rounded-xl lg:rounded-[25px] p-2.5 md:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
+                className="w-full resize-none bg-white border border-[#D9D9D9] rounded-xl lg:rounded-[25px] p-2.5 xl:p-5 text-xs md:text-base outline-none focus:border-[#1F6B5A]"
               ></textarea>
             </div>
 
@@ -435,7 +435,7 @@ useEffect(() => {
                   }
                 `}
               >
-                <span className="text-white text-xs sm:text-sm md:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
+                <span className="text-white text-xs sm:text-sm lg:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
                   {submitting
                     ? "Connecting..."
                     : "Contact Now"}
@@ -449,7 +449,7 @@ useEffect(() => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="h-[400px] lg:h-full">
+        <div className="h-[400px] md:h-full">
           <img
             src={contactImg}
             alt="Contact"
