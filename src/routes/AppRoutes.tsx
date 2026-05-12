@@ -14,6 +14,7 @@ import LivingLegacyStrategyComponent from "../components/pages/Service/Living-Le
 import WhoWeServeComponent from "../components/pages/Who-We-Serve/WhoWeServeComponent";
 import MoneyMedicComponent from "../components/pages/Money-Medic/MoneyMedicComponent";
 import ResourcesComponent from "../components/pages/Resources/ResourcesComponent";
+import BlogDetails from "../components/pages/Resources/BlogDetails";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -42,6 +43,7 @@ const AppRoutes = () => {
         <Route path="/who-we-serve" element={<WhoWeServeComponent />} />
         <Route path="/money-medic" element={<MoneyMedicComponent />} />
         <Route path="/resources" element={<ResourcesComponent />} />
+        <Route path="/resources/:slug" element={<BlogDetails/>}/>
         <Route path="/contact" element={<ContactComponent />} />
       </Routes>
       <Footer/>
