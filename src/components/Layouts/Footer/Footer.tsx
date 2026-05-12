@@ -144,9 +144,9 @@ const Footer: React.FC = () => {
                 {[
                   { name: "Home", link: "/" },
                   { name: "About Us", link: "/about" },
-                  { name: "Services", link: "/services" },
+                  { name: "Services", link: "/service" },
                   { name: "Who We Serve", link: "/who-we-serve" },
-                  { name: "WealthCare™", link: "/wealthcare" },
+                  { name: "WealthCare™", link: "/wealth-care" },
                   { name: "Contact", link: "/contact" },
                 ].map((item, index) => (
                   <li key={index}>
