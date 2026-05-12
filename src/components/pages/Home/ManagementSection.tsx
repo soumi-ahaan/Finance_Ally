@@ -63,7 +63,7 @@ export const ManagementSection = () => {
 
     return (
         <section className="bg-gradient-to-br from-[#1F7180] to-[#123F4E] py-10 lg:py-20 px-6 lg:px-8 xl:px-[70px] font-sans ">
-            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 items-center pb-10">
+            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 xl:gap-[90px] items-center pb-10">
 
                 {/* Left Side: Image */}
                 <div className="rounded-[15px] overflow-hidden shadow-2xl border border-white/10">
@@ -104,7 +104,7 @@ export const ManagementSection = () => {
                     </ul>
                     <div>
                         <button className="group/btn border border-white/70  transition-all duration-300
-                  rounded-full h-[56px] sm:h-[60px] pl-3 sm:pl-7 pr-2 sm:pr-4 flex items-center gap-3 sm:gap-5">
+                  rounded-full h-[56px] sm:h-[48px] pl-3 sm:pl-7 pr-2 sm:pr-4 flex items-center gap-3 sm:gap-5">
                             <span className="font-semibold text-sm tracking-wide">
                                 Explore WealthCare Support
                             </span>
@@ -116,7 +116,7 @@ export const ManagementSection = () => {
                 </div>
 
             </div>
-            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 items-center">
+            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 xl:gap-[90px] items-center">
 
                 {/* Left Side Content */}
                 <div className="text-white">
@@ -140,7 +140,7 @@ export const ManagementSection = () => {
                     </ul>
 
                     <button className="group/btn border border-white/70  transition-all duration-300
-                  rounded-full h-[56px] sm:h-[60px] pl-3 sm:pl-7 pr-2 sm:pr-4 flex items-center gap-3 sm:gap-5">
+                  rounded-full h-[56px] sm:h-[48px] pl-3 sm:pl-7 pr-2 sm:pr-4 flex items-center gap-3 sm:gap-5">
                         <span className="text-sm font-semibold">How Our Approach Works</span>
                         <div className="bg-white rounded-full p-1 transition-transform ">
                             <CaretRightIcon size={16} weight="bold" className="text-[#123F4E]" />

@@ -1,4 +1,4 @@
-import { ArrowRight } from "@phosphor-icons/react";
+import { CaretRightIcon } from "@phosphor-icons/react";
 
 const CallToAction = () => {
   return (
@@ -47,7 +47,7 @@ const CallToAction = () => {
           <button
             className="group bg-[#39aeb4] hover:bg-[#2d989e]
             transition-all duration-300 rounded-full
-            h-[60px] sm:h-[66px]
+            h-[60px] sm:h-[64px]
             pl-8 sm:pl-10 pr-4
             flex items-center gap-5"
           >
@@ -60,7 +60,7 @@ const CallToAction = () => {
               text-[#39aeb4] flex items-center justify-center shrink-0
               group-hover:translate-x-1 transition-transform duration-300"
             >
-              <ArrowRight size={20} weight="bold" />
+              <CaretRightIcon size={20} weight="bold" />
             </div>
           </button>
         </div>
