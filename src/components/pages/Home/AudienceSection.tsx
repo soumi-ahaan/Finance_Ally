@@ -37,14 +37,14 @@ const features = [
 
 export default function AudienceSection() {
   return (
-    <section className="py-14 lg:py-20 bg-[#f5f5f5]">
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
+    <section className="py-14 bg-[#f5f5f5]">
+      <div className="max-w-[1440px] mx-auto px-4 lg:px-8 xl:px-[70px]">
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-5">
           {audienceData.map((item) => (
             <div
               key={item.id}
-              className="relative overflow-hidden rounded-[28px] min-h-[320px] lg:min-h-[360px] group"
+              className="relative overflow-hidden rounded-[25px] min-h-[320px] lg:min-h-[360px] group"
             >
               {/* Background Image */}
               <img
