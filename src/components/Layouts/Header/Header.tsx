@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 import {
@@ -106,7 +106,7 @@ const Header = () => {
                     {item.links.map((link, i) => (
                       <Link
                         key={i}
-                        to={link.path} 
+                        to={link.path}
                         className="group/item flex items-center justify-between rounded-xl px-4 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
                       >
                         <span>{link.name}</span>
@@ -174,10 +174,11 @@ const Header = () => {
 
           {/* CTA */}
           <div className="hidden lg:flex">
-            <button className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full pl-5 pr-3 py-2  2xl:pl-7 2xl:pr-3 2xl:py-2.5 flex items-center gap-3 font-semibold text-base">
-              Book Now
+            <button className="group/btn bg-[#2B9896] hover:bg-white  hover:shadow-[0px_0px_10px_1px_#00000026]  duration-300 text-white rounded-full  pl-5 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
+              <span className="text-white text-xs sm:text-sm md:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
+                Book Now</span>
 
-              <div className="w-8 h-8 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">
+              <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white text-[#2B9896] flex items-center justify-center shrink-0 group-hover/btn:bg-[#2B9896] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-transform duration-300">
                 <CaretRightIcon size={14} weight="bold" />
               </div>
             </button>
@@ -203,18 +204,18 @@ const Header = () => {
         <div className=" flex flex-col gap-2">
 
           <NavLink
-            to="/" onClick={() => setMobileMenu(false)} 
+            to="/" onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
                 : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
-                
+
             }
           >
             Home
           </NavLink>
           <NavLink
-            to="/about" onClick={() => setMobileMenu(false)} 
+            to="/about" onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
@@ -225,68 +226,66 @@ const Header = () => {
           </NavLink>
 
           {/* DROPDOWN MENUS */}
-{menuItems.map((item, index) => {
-  const isOpen = openIndex === index;
+          {menuItems.map((item, index) => {
+            const isOpen = openIndex === index;
 
-  return (
-    <div key={index} className="relative">
-      {/* Menu Title */}
-      <div
-      
-        onClick={() =>
-          setOpenIndex(isOpen ? null : index)
-        }
-        className="flex items-center justify-between gap-1 cursor-pointer text-[#2B9896] hover:bg-[#2B9896] hover:text-white text-base px-6 py-3"
-      >
-        <span className="font-[550]">
-          {item.title}
-        </span>
+            return (
+              <div key={index} className="relative">
+                {/* Menu Title */}
+                <div
 
-        <CaretDown
-          size={16}
-          weight="bold"
-          className={`duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
-      </div>
+                  onClick={() =>
+                    setOpenIndex(isOpen ? null : index)
+                  }
+                  className="flex items-center justify-between gap-1 cursor-pointer text-[#2B9896] hover:bg-[#2B9896] hover:text-white text-base px-6 py-3"
+                >
+                  <span className="font-[550]">
+                    {item.title}
+                  </span>
 
-      {/* Dropdown */}
-      <div
-        className={`overflow-hidden duration-300 ${
-          isOpen
-            ? "max-h-[500px] opacity-100 mt-2"
-            : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="min-w-[50px] bg-[#2B9896] rounded-sm p-2 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
-          <div className="flex flex-col gap-1">
-            {item.links.map((link, i) => (
-              <Link
-                key={i}
-                to={link.path}
-                onClick={() => {
-            setMobileMenu(false);
-           
-          }}
-                className="flex items-center justify-between rounded-sm px-2 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
-              >
-                <span>{link.name}</span>
+                  <CaretDown
+                    size={16}
+                    weight="bold"
+                    className={`duration-300 ${isOpen ? "rotate-180" : ""
+                      }`}
+                  />
+                </div>
 
-                <ArrowRight
-                  size={14}
-                  weight="bold"
-                />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-})}
+                {/* Dropdown */}
+                <div
+                  className={`overflow-hidden duration-300 ${isOpen
+                      ? "max-h-[500px] opacity-100 mt-2"
+                      : "max-h-0 opacity-0"
+                    }`}
+                >
+                  <div className="min-w-[50px] bg-[#2B9896] rounded-sm p-2 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
+                    <div className="flex flex-col gap-1">
+                      {item.links.map((link, i) => (
+                        <Link
+                          key={i}
+                          to={link.path}
+                          onClick={() => {
+                            setMobileMenu(false);
+
+                          }}
+                          className="flex items-center justify-between rounded-sm px-2 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
+                        >
+                          <span>{link.name}</span>
+
+                          <ArrowRight
+                            size={14}
+                            weight="bold"
+                          />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
           <NavLink
-            to="/who-we-serve" onClick={() => setMobileMenu(false)} 
+            to="/who-we-serve" onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
@@ -296,7 +295,7 @@ const Header = () => {
             Who We Serve
           </NavLink>
           <NavLink
-            to="/money-medic" onClick={() => setMobileMenu(false)} 
+            to="/money-medic" onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
@@ -306,28 +305,28 @@ const Header = () => {
             Money Medic
           </NavLink>
           <NavLink
-            to="/resources" onClick={() => setMobileMenu(false)} 
+            to="/resources" onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
                 : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
-           Resources
+            Resources
           </NavLink>
           <NavLink
-            to="/contact" onClick={() => setMobileMenu(false)} 
+            to="/contact" onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
                 : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
-           Contact
+            Contact
           </NavLink>
           {/* CTA */}
           <div className="ml-6 mr-6">
-            <button  onClick={() => setMobileMenu(false)} className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-5 pr-3 py-2 flex items-center gap-3 font-semibold text-sm">
+            <button onClick={() => setMobileMenu(false)} className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-5 pr-3 py-2 flex items-center gap-3 font-semibold text-sm">
               Book Now
 
               <div className="w-6 h-6 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">

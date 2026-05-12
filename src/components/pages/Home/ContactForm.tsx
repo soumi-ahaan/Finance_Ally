@@ -427,22 +427,22 @@ useEffect(() => {
                 disabled={
                   submitting
                 }
-                className={`bg-[#2B9896]  duration-300 text-white rounded-full  pl-5 pr-3 py-2 md:pl-7 md:pr-3 md:py-2.5 flex items-center gap-3 font-semibold text-base
+                className={`group/btn bg-[#2B9896]  text-white rounded-full  pl-5 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold
                   
                   ${submitting
                     ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-[#1F7180] hover:scale-110"
+                    : "hover:bg-transparent  hover:shadow-[0px_0px_10px_1px_#00000026]  duration-300"
                   }
                 `}
               >
-                <span className="text-white text-sm md:text-base font-semibold ">
+                <span className="text-white text-xs sm:text-sm md:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
                   {submitting
                     ? "Connecting..."
                     : "Contact Now"}
                 </span>
-                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">
-                                <CaretRightIcon size={12} weight="bold" />
-                              </div>
+                <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white text-[#2B9896] flex items-center justify-center shrink-0 group-hover/btn:bg-[#2B9896] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-transform duration-300">
+                                    <CaretRightIcon size={14} weight="bold" />
+                                </div>
               </button>
             </div>
           </form>

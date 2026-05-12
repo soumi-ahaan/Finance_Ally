@@ -26,11 +26,11 @@ export default function MoneyWorks() {
                     {/* Right Side: Content */}
                     <div className="flex flex-col ">
 
-                        <h2 className="text-[24px] lg:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight font-heading">
+                        <h2 className="text-2xl lg:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight font-heading">
                             Money Works Like the Heart
                         </h2>
 
-                        <p className="text-[#727171] text-xs lg:text-base mb-3 lg:mb-4 leading-relaxed max-w-xl">
+                        <p className="text-[#727171] text-sm lg:text-base mb-3 lg:mb-4 leading-relaxed max-w-sm">
                             The heart doesn’t “try harder.” It restores circulation by fixing the right chamber.
                             <br className="hidden lg:block"/>
                             Money Medic does the same: we identify where your system is under strain—and prescribe the simplest actions to restore stability.
@@ -55,7 +55,7 @@ export default function MoneyWorks() {
                         <div>
                             <button
 
-                                className="group/btn bg-[#2B9896] hover:bg-transparent  hover:shadow-[0px_0px_10px_1px_#00000026]  duration-300 text-white rounded-full  pl-5 pr-3 py-2 lg:pl-7 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
+                                className="group/btn bg-[#2B9896] hover:bg-transparent  hover:shadow-[0px_0px_10px_1px_#00000026]  duration-300 text-white rounded-full  pl-5 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
                                 <span className="text-white text-xs sm:text-sm md:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
                                     Triage Intake Assessment
                                 </span>
