@@ -30,12 +30,12 @@ export default function MoneyWorks() {
                             Money Works Like the Heart
                         </h2>
 
-                        <p className="text-[#727171] text-sm lg:text-base mb-3 lg:mb-4 leading-relaxed max-w-sm">
+                        <p className="text-[#727171] text-sm lg:text-base mb-3 lg:mb-4 leading-relaxed max-w-lg">
                             The heart doesn’t “try harder.” It restores circulation by fixing the right chamber.
                             <br className="hidden lg:block"/>
                             Money Medic does the same: we identify where your system is under strain—and prescribe the simplest actions to restore stability.
                         </p>
-                        <p className="text-[#727171] text-xs lg:text-base mb-3 lg:mb-4 leading-relaxed max-w-xl font-semibold">
+                        <p className="text-[#727171] text-xs lg:text-base mb-3 lg:mb-4 leading-relaxed  max-w-xl font-semibold">
                             The 4 Chambers of Financial Wealth:
                         </p>
 
