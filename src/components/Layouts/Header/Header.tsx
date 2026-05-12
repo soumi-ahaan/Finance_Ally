@@ -1,10 +1,7 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
-import {
-  CaretDown,
-  ArrowRight, CaretRightIcon
-} from "@phosphor-icons/react";
+import { CaretDown, ArrowRight, CaretRightIcon } from "@phosphor-icons/react";
 
 import logo from "../../../assets/logo.png";
 
@@ -24,21 +21,21 @@ const Header = () => {
         },
 
         {
-          name: "Tax Preparedness",
-          path: "/tax-preparedness",
+          name: "Wealthcare",
+          path: "/wealth-care",
         },
 
         {
-          name: "Payroll & Compliance",
-          path: "/payroll-compliance",
+          name: "Whole Finance",
+          path: "/whole-finance",
         },
 
         {
-          name: "Fractional CFO Support",
-          path: "/fractional-cfo-support",
+          name: "Living Legacy Strategy",
+          path: "/living-legacy-strategy",
         },
       ],
-    }
+    },
   ];
 
   return (
@@ -64,7 +61,6 @@ const Header = () => {
                   ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-2 2xl:px-2.5 py-3"
                   : "text-white text-sm 2xl:text-base px-2 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
-
             >
               Home
             </NavLink>
@@ -83,15 +79,15 @@ const Header = () => {
 
             {/* DROPDOWN MENUS */}
             {menuItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative group"
-              >
+              <div key={index} className="relative group">
                 {/* Menu Title */}
                 <div className="flex items-center gap-1 cursor-pointer">
-                  <span className="text-white group-hover:text-[#1F7180] hover:font-bold hover:font-bold duration-300 text-sm xl:text-base px-2 xl:px-2.5 py-3">
+                  <Link
+                    to="/service"
+                    className="text-white group-hover:text-[#1F7180] hover:font-bold duration-300 text-sm xl:text-base px-2 xl:px-2.5 py-3"
+                  >
                     {item.title}
-                  </span>
+                  </Link>
 
                   <CaretDown
                     size={12}
@@ -106,7 +102,7 @@ const Header = () => {
                     {item.links.map((link, i) => (
                       <Link
                         key={i}
-                        to={link.path} 
+                        to={link.path}
                         className="group/item flex items-center justify-between rounded-xl px-4 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
                       >
                         <span>{link.name}</span>
@@ -176,7 +172,6 @@ const Header = () => {
           <div className="hidden lg:flex">
             <button className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full pl-5 pr-3 py-2  2xl:pl-7 2xl:pr-3 2xl:py-2.5 flex items-center gap-3 font-semibold text-base">
               Book Now
-
               <div className="w-8 h-8 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">
                 <CaretRightIcon size={14} weight="bold" />
               </div>
@@ -187,9 +182,19 @@ const Header = () => {
             className="lg:hidden mt-4 ml-auto flex items-center rounded-lg  bg-transparent  justify-center h-16 w-16 text-[#1F7180]"
             onClick={() => setMobileMenu(true)}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1F7180" stroke="#1F7180"
-              strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#1F7180"
+              stroke="#1F7180"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
@@ -197,13 +202,20 @@ const Header = () => {
 
       {/* OFF-CANVAS MENU */}
       <div
-        className={`fixed top-0 right-0 h-full w-[280px] bg-white shadow-lg z-50 transform transition-transform duration-300 ${mobileMenu ? "translate-x-0" : "translate-x-full"
-          }`}
-      ><button onClick={() => setMobileMenu(false)} className="ml-6 my-6 py-1 px-2.5 text-xl left-0 bg-[#1F6B5A] text-white rounded-full">✕</button>
+        className={`fixed top-0 right-0 h-full w-[280px] bg-white shadow-lg z-50 transform transition-transform duration-300 ${
+          mobileMenu ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          onClick={() => setMobileMenu(false)}
+          className="ml-6 my-6 py-1 px-2.5 text-xl left-0 bg-[#1F6B5A] text-white rounded-full"
+        >
+          ✕
+        </button>
         <div className=" flex flex-col gap-2">
-
           <NavLink
-            to="/" onClick={() => setMobileMenu(false)} 
+            to="/"
+            onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -213,7 +225,8 @@ const Header = () => {
             Home
           </NavLink>
           <NavLink
-            to="/about" onClick={() => setMobileMenu(false)} 
+            to="/about"
+            onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -224,68 +237,58 @@ const Header = () => {
           </NavLink>
 
           {/* DROPDOWN MENUS */}
-{menuItems.map((item, index) => {
-  const isOpen = openIndex === index;
+          {menuItems.map((item, index) => {
+            const isOpen = openIndex === index;
 
-  return (
-    <div key={index} className="relative">
-      {/* Menu Title */}
-      <div
-      
-        onClick={() =>
-          setOpenIndex(isOpen ? null : index)
-        }
-        className="flex items-center justify-between gap-1 cursor-pointer text-[#1F7180] hover:bg-[#1F7180] hover:text-white text-base px-6 py-3"
-      >
-        <span className="font-[550]">
-          {item.title}
-        </span>
+            return (
+              <div key={index} className="relative">
+                {/* Menu Title */}
+                <div
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  className="flex items-center justify-between gap-1 cursor-pointer text-[#1F7180] hover:bg-[#1F7180] hover:text-white text-base px-6 py-3"
+                >
+                  <span className="font-[550]">{item.title}</span>
 
-        <CaretDown
-          size={16}
-          weight="bold"
-          className={`duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
-      </div>
+                  <CaretDown
+                    size={16}
+                    weight="bold"
+                    className={`duration-300 ${isOpen ? "rotate-180" : ""}`}
+                  />
+                </div>
 
-      {/* Dropdown */}
-      <div
-        className={`overflow-hidden duration-300 ${
-          isOpen
-            ? "max-h-[500px] opacity-100 mt-2"
-            : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="min-w-[50px] bg-[#1F7180] rounded-sm p-2 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
-          <div className="flex flex-col gap-1">
-            {item.links.map((link, i) => (
-              <Link
-                key={i}
-                to={link.path}
-                onClick={() => {
-            setMobileMenu(false);
-           
-          }}
-                className="flex items-center justify-between rounded-sm px-2 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
-              >
-                <span>{link.name}</span>
+                {/* Dropdown */}
+                <div
+                  className={`overflow-hidden duration-300 ${
+                    isOpen
+                      ? "max-h-[500px] opacity-100 mt-2"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="min-w-[50px] bg-[#1F7180] rounded-sm p-2 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
+                    <div className="flex flex-col gap-1">
+                      {item.links.map((link, i) => (
+                        <Link
+                          key={i}
+                          to={link.path}
+                          onClick={() => {
+                            setMobileMenu(false);
+                          }}
+                          className="flex items-center justify-between rounded-sm px-2 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
+                        >
+                          <span>{link.name}</span>
 
-                <ArrowRight
-                  size={14}
-                  weight="bold"
-                />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-})}
+                          <ArrowRight size={14} weight="bold" />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
           <NavLink
-            to="/who-we-serve" onClick={() => setMobileMenu(false)} 
+            to="/who-we-serve"
+            onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -295,7 +298,8 @@ const Header = () => {
             Who We Serve
           </NavLink>
           <NavLink
-            to="/money-medic" onClick={() => setMobileMenu(false)} 
+            to="/money-medic"
+            onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
@@ -305,30 +309,34 @@ const Header = () => {
             Money Medic
           </NavLink>
           <NavLink
-            to="/resources" onClick={() => setMobileMenu(false)} 
+            to="/resources"
+            onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
                 : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
             }
           >
-           Resources
+            Resources
           </NavLink>
           <NavLink
-            to="/contact" onClick={() => setMobileMenu(false)} 
+            to="/contact"
+            onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
                 ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
                 : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
             }
           >
-           Contact
+            Contact
           </NavLink>
           {/* CTA */}
           <div className="ml-6 mr-6">
-            <button  onClick={() => setMobileMenu(false)} className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-5 pr-3 py-2 flex items-center gap-3 font-semibold text-sm">
+            <button
+              onClick={() => setMobileMenu(false)}
+              className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-5 pr-3 py-2 flex items-center gap-3 font-semibold text-sm"
+            >
               Book Now
-
               <div className="w-6 h-6 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">
                 <CaretRightIcon size={10} weight="bold" />
               </div>
