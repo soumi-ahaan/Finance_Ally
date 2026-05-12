@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 
 import { CaretDown, ArrowRight, CaretRightIcon } from "@phosphor-icons/react";
 
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/Company_Logo.png";
 
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
