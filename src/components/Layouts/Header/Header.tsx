@@ -1,10 +1,7 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
-import {
-  CaretDown,
-  ArrowRight, CaretRightIcon
-} from "@phosphor-icons/react";
+import { CaretDown, ArrowRight, CaretRightIcon } from "@phosphor-icons/react";
 
 import logo from "../../../assets/logo.png";
 
@@ -24,21 +21,21 @@ const Header = () => {
         },
 
         {
-          name: "Tax Preparedness",
-          path: "/tax-preparedness",
+          name: "Wealthcare",
+          path: "/wealth-care",
         },
 
         {
-          name: "Payroll & Compliance",
-          path: "/payroll-compliance",
+          name: "Whole Finance",
+          path: "/whole-finance",
         },
 
         {
-          name: "Fractional CFO Support",
-          path: "/fractional-cfo-support",
+          name: "Living Legacy Strategy",
+          path: "/living-legacy-strategy",
         },
       ],
-    }
+    },
   ];
 
   return (
@@ -64,7 +61,6 @@ const Header = () => {
                   ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-1 2xl:px-2.5 py-3"
                   : "text-white text-sm 2xl:text-base px-1 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
               }
-
             >
               Home
             </NavLink>
@@ -83,10 +79,7 @@ const Header = () => {
 
             {/* DROPDOWN MENUS */}
             {menuItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative group"
-              >
+              <div key={index} className="relative group">
                 {/* Menu Title */}
                 <div className="flex items-center gap-1 cursor-pointer">
                   <span className="text-white group-hover:text-[#1F7180] hover:font-bold hover:font-bold duration-300 text-sm xl:text-base px-1 xl:px-2.5 py-3">
@@ -188,9 +181,19 @@ const Header = () => {
             className="lg:hidden mt-4 ml-auto flex items-center rounded-lg  bg-transparent  justify-center h-16 w-16 text-[#1F7180]"
             onClick={() => setMobileMenu(true)}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#1F7180" stroke="#1F7180"
-              strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="#2B9896"
+              stroke="#2B9896"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
@@ -198,11 +201,17 @@ const Header = () => {
 
       {/* OFF-CANVAS MENU */}
       <div
-        className={`fixed top-0 right-0 h-screen w-[280px] bg-black shadow-lg z-50 overflow-y-auto scrollbar-hide transform transition-transform duration-300 ${mobileMenu ? "translate-x-0" : "translate-x-full"
-          }`}
-      ><button onClick={() => setMobileMenu(false)} className="ml-6 my-6 py-1 px-2.5 text-xl left-0 bg-[#2B9896] text-white rounded-full">✕</button>
+        className={`fixed top-0 right-0 h-screen  w-[280px] bg-black shadow-lg z-50 overflow-y-auto  transform transition-transform duration-300 hide-scrollbar ${
+          mobileMenu ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          onClick={() => setMobileMenu(false)}
+          className="ml-6 my-6 py-1 px-2.5 text-xl left-0 bg-[#2B9896] text-white rounded-full"
+        >
+          ✕
+        </button>
         <div className=" flex flex-col gap-2">
-
           <NavLink
             to="/" onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
@@ -328,7 +337,6 @@ const Header = () => {
           <div className="ml-6 mr-6">
             <button onClick={() => setMobileMenu(false)} className="bg-[#2B9896] hover:bg-[#1F7180] duration-300 text-white rounded-full  pl-5 pr-3 py-2 flex items-center gap-3 font-semibold text-sm">
               Book Now
-
               <div className="w-6 h-6 rounded-full bg-white text-[#123F4E] flex items-center justify-center shrink-0">
                 <CaretRightIcon size={10} weight="bold" />
               </div>
