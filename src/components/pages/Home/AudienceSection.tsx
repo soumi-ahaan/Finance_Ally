@@ -76,15 +76,15 @@ export default function AudienceSection() {
 
                 {/* Button */}
                 <button
-                className="group/btn bg-transparent border border-white hover:bg-white  duration-300 text-white rounded-full  pl-5 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
-                <span className="text-white text-xs sm:text-sm lg:text-base font-semibold group-hover/btn:text-[#123F4E] transition-colors duration-300">
-                  {item.buttonText}
+                  className="group/btn bg-transparent border border-white hover:bg-white  duration-300 text-white rounded-full  pl-5 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
+                  <span className="text-white text-xs sm:text-sm lg:text-base font-semibold group-hover/btn:text-[#123F4E] transition-colors duration-300">
+                    {item.buttonText}
                   </span>
 
-                 
+
                   <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white group-hover/btn:bg-[#2B9896] text-[#123F4E] group-hover/btn:text-white flex items-center justify-center shrink-0 group-hover/btn:translate-x-1 transition-transform duration-300">
-                                    <CaretRightIcon size={14} weight="bold" />
-                                </div>
+                    <CaretRightIcon size={14} weight="bold" />
+                  </div>
                 </button>
               </div>
             </div>
@@ -127,8 +127,8 @@ export default function AudienceSection() {
                   Schedule a CFO-Level Financial Review
                 </span>
                 <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white text-[#2B9896] flex items-center justify-center shrink-0 group-hover/btn:bg-[#2B9896] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-transform duration-300">
-                                    <CaretRightIcon size={14} weight="bold" />
-                                </div>
+                  <CaretRightIcon size={14} weight="bold" />
+                </div>
               </button>
             </div>
           </div>
