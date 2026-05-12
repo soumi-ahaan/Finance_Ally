@@ -12,14 +12,14 @@ export default function MoneyWorks() {
     return (
         <section className="py-14 xl:pt-[70px] xl:pb-[114px]">
             <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 xl:px-[70px]">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 xl:gap-[90px] items-center">
                     {/* Left Side: Image */}
                     <div className="relative">
                         <div className="rounded-2xl overflow-hidden shadow-2xl">
                             <img
                                 src={moneywork}
                                 alt="Financial professional working with calculator"
-                                className="w-full max-h-[494px] object-cover aspect-[4/3] lg:aspect-square"
+                                className="w-full max-h-[423px] object-cover aspect-[4/3] lg:aspect-square"
                             />
                         </div>
                     </div>

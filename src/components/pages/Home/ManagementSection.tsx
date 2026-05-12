@@ -116,7 +116,7 @@ export const ManagementSection = () => {
                 </div>
 
             </div>
-            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 items-center">
+            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 xl:gap-[90px] items-center">
 
                 {/* Left Side Content */}
                 <div className="text-white">
