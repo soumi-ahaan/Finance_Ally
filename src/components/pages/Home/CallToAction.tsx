@@ -26,8 +26,8 @@ const CallToAction = () => {
           {/* Heading */}
           <h2
             className="text-white font-bold leading-[1.05]
-            text-[42px] sm:text-[54px] lg:text-[64px]
-            tracking-[-2px] mb-6"
+            text-[28px] lg:text-[55px]
+            tracking-[-2px] mb-6 font-heading"
           >
             Ready for Financial Clarity
           </h2>
@@ -35,7 +35,7 @@ const CallToAction = () => {
           {/* Description */}
           <p
             className="text-white/95 font-medium
-            text-[17px] sm:text-[19px]
+            text-sm lg:text-xl
             leading-[1.8] max-w-[720px] mb-10"
           >
             Let’s organize your books, improve visibility, and
@@ -45,23 +45,18 @@ const CallToAction = () => {
 
           {/* Button */}
           <button
-            className="group bg-[#39aeb4] hover:bg-[#2d989e]
+            className="group/btn bg-[#2B9896] hover:bg-white
             transition-all duration-300 rounded-full
-            h-[60px] sm:h-[64px]
-            pl-8 sm:pl-10 pr-4
-            flex items-center gap-5"
+            pl-5 pr-3 py-2 lg:pl-7 lg:pr-3 lg:py-2.5
+            flex items-center gap-3"
           >
-            <span className="text-white text-[16px] sm:text-[18px] font-semibold">
+            <span className="text-white text-xs sm:text-sm md:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
               Schedule A Financial Review
             </span>
 
-            <div
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white
-              text-[#39aeb4] flex items-center justify-center shrink-0
-              group-hover:translate-x-1 transition-transform duration-300"
-            >
-              <CaretRightIcon size={20} weight="bold" />
-            </div>
+           <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white text-[#2B9896] flex items-center justify-center shrink-0 group-hover/btn:bg-[#2B9896] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-transform duration-300">
+                                    <CaretRightIcon size={14} weight="bold" />
+                                </div>
           </button>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import axios from "axios";
 
-import type { ServiceItem } from "../components/types/AllType";
+import type { ServiceItem, BlogItem } from "../components/types/AllType";
+
 
 const BASE_URL =
   "https://finance-ally.ahaanmedia.com/wp-json/wp/v2";
@@ -94,23 +95,65 @@ export const contactentries = async (
 };
 
 // ==============================
-// FUTURE APIs
+// LATEST BLOGS API
 // ==============================
 
-// BLOGS
-// export const getBlogs = async () => {
-//   const response = await api.get("/posts?_embed");
-//   return response.data;
-// };
+export const getLatestBlogs = async (): Promise<
+  BlogItem[]
+> => {
+  try {
+    const response = await api.get(
+      "/posts?_embed&per_page=2&orderby=date&order=desc"
+    );
 
-// TESTIMONIALS
-// export const getTestimonials = async () => {
-//   const response = await api.get("/testimonials");
-//   return response.data;
-// };
+    return response.data;
+  } catch (error) {
+    console.log(
+      "Latest Blogs API Error:",
+      error
+    );
 
-// TEAM
-// export const getTeamMembers = async () => {
-//   const response = await api.get("/team");
-//   return response.data;
-// };
+    return [];
+  }
+};
+
+// ==============================
+// BLOGS API
+// ==============================
+
+export const getBlogs = async (): Promise<
+  BlogItem[]
+> => {
+  try {
+    const response = await api.get(
+      "/posts?_embed"
+    );
+
+    return response.data;
+  } catch (error) {
+    console.log("Blogs API Error:", error);
+
+    return [];
+  }
+};
+
+export const getSingleBlog = async (
+  slug: string
+): Promise<BlogItem | null> => {
+  try {
+    const response = await api.get(
+      `/posts?slug=${slug}&_embed`
+    );
+
+    return response.data[0];
+  } catch (error) {
+    console.log(
+      "Single Blog API Error:",
+      error
+    );
+
+    return null;
+  }
+};
+
+export default api;

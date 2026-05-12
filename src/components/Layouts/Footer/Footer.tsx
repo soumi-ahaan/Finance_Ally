@@ -1,4 +1,10 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
+
+import { Link } from "react-router-dom";
+
+import { getLatestBlogs } from "../../../Api/Api";
+
+import type { BlogItem } from "../../types/AllType";
 import {
   CaretRight,
   FacebookLogo,
@@ -12,6 +18,7 @@ import {
 import logo2 from "../../../assets/logo.png";
 
 const Footer: React.FC = () => {
+  const [blogs, setBlogs] = useState<BlogItem[]>([]);
 
   const [email, setEmail] = useState("");
 
@@ -25,17 +32,24 @@ const Footer: React.FC = () => {
     setEmail("");
   };
 
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const data = await getLatestBlogs();
+
+      setBlogs(data);
+    };
+
+    fetchBlogs();
+  }, []);
+
   return (
     <footer className="w-full bg-[#000000] overflow-hidden">
       {/* Main Container */}
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[70px] pt-[50px] pb-[30px]">
-
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:flex xl:flex-row xl:items-center xl:justify-between gap-8 mb-[42px]">
-
           {/* Left Area */}
           <div className="flex flex-col lg:flex-row lg:items-center gap-6 xl:gap-10">
-
             {/* Logo */}
             <div className="shrink-0">
               {/* Replace with your logo */}
@@ -54,7 +68,6 @@ const Footer: React.FC = () => {
 
           {/* Right Area */}
           <div className="flex flex-col lg:flex-row lg:items-center gap-6">
-
             {/* Email Field */}
             <form
               onSubmit={handleSubmit}
@@ -109,15 +122,18 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Middle Section */}
-        <div className="bg-[#1F1F1F] w-screen relative left-1/2 right-1/2 -translate-x-1/2 lg:w-full lg:left-0 lg:right-0 lg:translate-x-0 rounded-none 
-                lg:rounded-[2px] px-6 sm:px-8 lg:px-[28px] py-[33px]">
-          <div className="grid 
+        <div
+          className="bg-[#1F1F1F] w-screen relative left-1/2 right-1/2 -translate-x-1/2 lg:w-full lg:left-0 lg:right-0 lg:translate-x-0 rounded-none 
+                lg:rounded-[2px] px-6 sm:px-8 lg:px-[28px] py-[33px]"
+        >
+          <div
+            className="grid 
                 grid-cols-1 
                 sm:grid-cols-2 
                 lg:grid-cols-[1fr_1fr_1.37fr_0.8fr_1.25fr] 
                 gap-y-[65px] 
-                lg:gap-x-[45px]">
-
+                lg:gap-x-[45px]"
+          >
             {/* Quick Links */}
             <div>
               <h3 className="text-white font-heading font-semibold text-[18px] mb-7">
@@ -267,30 +283,39 @@ const Footer: React.FC = () => {
               </h3>
 
               <div className="space-y-6">
+                {blogs.map((blog) => {
+                  const image =
+                    blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+                    "https://via.placeholder.com/150";
 
-                {[1, 2].map((item) => (
-                  <a
-                    key={item}
-                    href="#"
-                    className="flex gap-4 group border-b border-[#FFFFFF1A] pb-5"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=400&auto=format&fit=crop"
-                      alt="post"
-                      className="w-[72px] h-[72px] object-cover rounded-md shrink-0"
-                    />
+                  return (
+<Link
+  key={blog.id}
+  to={`/resources/${blog.slug}`}
+  className="flex gap-4 group border-b border-[#FFFFFF1A] pb-5"
+>
+                      <img
+                        src={image}
+                        alt={blog.title.rendered}
+                        className="w-[72px] h-[72px] object-cover rounded-md shrink-0"
+                      />
 
-                    <div>
-                      <h4 className="text-white font-medium text-[15px] leading-[23px] group-hover:text-[#2B9896] transition-all duration-300">
-                        Top 5 Trends in Modern Infrastructure Projects
-                      </h4>
+                      <div>
+                        <h4 className="text-white font-medium text-[15px] leading-[23px] group-hover:text-[#2B9896] transition-all duration-300">
+                          {blog.title.rendered}
+                        </h4>
 
-                      <p className="text-[#FFFFFF80] text-[13px] mt-2">
-                        Dec 15, 2025
-                      </p>
-                    </div>
-                  </a>
-                ))}
+                        <p className="text-[#FFFFFF80] text-[13px] mt-2">
+                          {new Date(blog.date).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </p>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -298,7 +323,6 @@ const Footer: React.FC = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-5 pt-7">
-
           {/* Copyright */}
           <p className="text-[#FBFBFB] text-[15px] font-normal text-center md:text-left leading-[28px]">
             © Copyright Year{" "}
