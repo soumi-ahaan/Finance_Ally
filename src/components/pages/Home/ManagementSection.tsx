@@ -62,11 +62,11 @@ export const ManagementSection = () => {
     const { radius, hub, scale } = dimensions;
 
     return (
-        <section className="bg-gradient-to-br from-[#1F7180] to-[#123F4E] py-10 lg:py-20 px-6 lg:px-8 font-sans ">
+        <section className="bg-gradient-to-br from-[#1F7180] to-[#123F4E] py-10 lg:py-20 px-6 lg:px-8 xl:px-[70px] font-sans ">
             <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 items-center pb-10">
 
                 {/* Left Side: Image */}
-                <div className="rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+                <div className="rounded-[15px] overflow-hidden shadow-2xl border border-white/10">
                     <img
                         src="/financial-analysis.jpg"
                         alt="WealthCare Management Dashboard"

@@ -8,7 +8,7 @@ export const StatBanner = () => {
     ];
 
     return (
-        <div className="bg-[#123F4E] px-4 py-4 xl:px-8 lg:py-8 w-full">
+        <div className="bg-[#123F4E] px-4 py-4 xl:px-[70px] lg:py-8 w-full">
             <div
                 className="max-w-[1440px] mx-auto flex overflow-x-auto gap-4 snap-x snap-mandatory scrollbar-hide lg:grid lg:grid-cols-5 lg:overflow-visible gap-1 xl:gap-6
                 "

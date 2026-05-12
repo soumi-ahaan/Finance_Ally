@@ -14,7 +14,7 @@ const AboutSection = () => {
     ];
 
     return (
-        <section className="max-w-7xl mx-auto py-16 px-6 lg:px-8 bg-white font-sans">
+        <section className="max-w-[1440px] mx-auto py-16 px-6 lg:px-8 xl:px-[70px] bg-white font-sans">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div className="relative group overflow-bottom-hidden">
                     <div className="rounded-lg">
