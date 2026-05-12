@@ -26,7 +26,7 @@ const CallToAction = () => {
           {/* Heading */}
           <h2
             className="text-white font-bold leading-[1.05]
-            text-[28px] lg:text-[55px]
+            text-[28px] sm:text-[35px] xl:text-[55px]
             tracking-[-2px] mb-6 font-heading"
           >
             Ready for Financial Clarity
@@ -35,7 +35,7 @@ const CallToAction = () => {
           {/* Description */}
           <p
             className="text-white/95 font-medium
-            text-sm lg:text-xl
+            text-sm sm:text-xl
             leading-[1.8] max-w-[720px] mb-10"
           >
             Let’s organize your books, improve visibility, and
@@ -47,10 +47,10 @@ const CallToAction = () => {
           <button
             className="group/btn bg-[#2B9896] hover:bg-white
             transition-all duration-300 rounded-full
-            pl-5 pr-3 py-2 lg:pl-7 lg:pr-3 lg:py-2.5
+            pl-5 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5
             flex items-center gap-3"
           >
-            <span className="text-white text-xs sm:text-sm md:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
+            <span className="text-white text-xs sm:text-sm lg:text-base font-semibold group-hover/btn:text-[#2B9896] transition-colors duration-300">
               Schedule A Financial Review
             </span>
 
