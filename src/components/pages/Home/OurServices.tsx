@@ -27,7 +27,7 @@ const OurServices = () => {
     <div className="absolute right-[-150px] top-[-150px] w-[500px] h-[500px] border border-[#d7e8e8] rounded-full"></div>
   </div>
 
-  <div className="relative max-w-[1440px] mx-auto px-4 lg:px-8 xl:px-[70px]">
+  <div className="relative max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 xl:px-[70px]">
     
     {/* Top Content */}
     <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_0.9fr_auto] gap-10 lg:gap-16 items-center mb-14 lg:mb-16">
