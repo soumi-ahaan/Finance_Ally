@@ -179,7 +179,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="https://maps.google.com"
+                    href="https://maps.app.goo.gl/y7tHQifdUSNyELua7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start gap-3 group"
