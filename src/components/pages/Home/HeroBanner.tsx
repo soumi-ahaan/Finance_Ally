@@ -3,9 +3,18 @@ import {CaretRightIcon } from "@phosphor-icons/react"
 
 export const HeroBanner = () => {
   return (
-    <section className=" overflow-hidden relative w-full max-h-[666px] bg-[#E6F4F6] flex items-center justify-center overflow-hidde">
+    <section className=" overflow-hidden relative w-full max-h-[666px] bg-[#E6F4F6] flex items-center justify-center overflow-hidde"
+   
+    >
+        {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center opacity-20"
+    style={{
+      backgroundImage: "url('./hero-banner.jpg')",
+    }}
+  ></div>
 
-      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-2 lg:gap-3 xl:gap-10 px-4 md:px-0">
+      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between m-0 gap-2 lg:gap-3 xl:gap-10 px-4 md:px-0">
          <div className=" h-15 md:h-[450px] lg:h-[500px] xl:h-[666px] relative flex justify-center items-center">
           <img
             src="/banner-sidbar.png"
@@ -25,25 +34,25 @@ export const HeroBanner = () => {
             <span className="h-[1px] w-8 bg-orange-400"></span>
             <span className="text-orange-400 font-highlight font-bold italic">Whole Finance Support</span>
           </div>
-          <h1 className="text-[24px] md:text-[32px] lg:text-[42px] xl:text-[54px] font-heading font-bold text-[#1A2E35] leading-tight">
+          <h1 className=" text-[24px] md:text-[32px] lg:text-[42px] xl:text-[62px] font-heading font-bold text-[#1A2E35] leading-tight">
             Your <span className="text-[#329696]">Finance Ally</span> for Business Owners & Family Offices
           </h1>
 
-          <p className="mt-4 text-gray-600 text-sm md:text-base max-w-md leading-relaxed">
+          <p className="mt-4 text-gray-600 text-sm md:text-base max-w-lg leading-relaxed">
             Whole Finance Support Through Bookkeeping, Tax Preparedness, WealthCare Management, And Fractional CFO-Level Clarity.
           </p>
 
           <div className="mt-6 flex flex-wrap justify-center gap-2">
-            <button className="flex text-sm xl:text-base items-center gap-2 bg-[#329696] hover:bg-[#287a7a] text-white px-5 xl:px-7.5 py-3 xl:py-4 rounded-full font-semibold transition-all">
-              Triage Intake Assessment
-              <div className="bg-white/20 rounded-full p-1">
+            <button className="group/btn bg-[#2B9896] hover:bg-transparent hover:border border-[#2B9896] hover:border-[#1A2B32]  hover:shadow-[0px_0px_10px_1px_#00000026]  duration-300 text-white rounded-full  pl-5 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
+            <span className="text-white text-xs sm:text-sm lg:text-base font-semibold group-hover/btn:text-[#1A2B32] transition-colors duration-300"> Triage Intake Assessment  </span> 
+              <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-white text-[#2B9896] flex items-center justify-center shrink-0 group-hover/btn:bg-[#1A2B32] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-transform duration-300">
                 <CaretRightIcon size={18} />
               </div>
             </button>
 
-            <button className="flex text-sm xl:text-base items-center gap-2 border-2 border-[#329696] text-[#329696] hover:bg-[#329696] hover:text-white px-6 xl:px-7.5 py-3 xl:py-4 rounded-full font-semibold transition-all">
-              View services
-              <div className="bg-[#329696]/20 rounded-full p-1">
+            <button className="group/btn bg-transparent border border-[#2B9896] hover:border-[#1A2B32] hover:bg-[#1A2B32]  duration-300 text-white rounded-full  pl-4 pr-3 py-2 lg:pl-8 lg:pr-3 lg:py-2.5 flex items-center gap-3 font-semibold">
+              <span className="text-[#2B9896] text-xs sm:text-sm lg:text-base font-semibold group-hover/btn:text-white transition-colors duration-300">View services</span>
+              <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-[#2B9896] group-hover/btn:bg-white text-white group-hover/btn:text-[#1A2B32] flex items-center justify-center shrink-0 group-hover/btn:translate-x-1 transition-transform duration-300">
                 <CaretRightIcon size={18} />
               </div>
             </button>
