@@ -1,8 +1,11 @@
+import Blog from "./Blog"
 
 
 const ResourcesComponent = () => {
   return (
-    <div>ResourcesComponent</div>
+    <div>
+      <Blog/>
+    </div>
   )
 }
 
