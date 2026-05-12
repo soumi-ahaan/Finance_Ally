@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import {  CaretRightIcon } from "@phosphor-icons/react";
+import {  ArrowRightIcon } from "@phosphor-icons/react";
 
 import { getServices, getMediaById } from "../../../Api/Api";
 
@@ -71,7 +71,7 @@ const OurServices = () => {
           <div
             className="w-8 h-8 rounded-full bg-white text-[#2da7b3] flex items-center justify-center shrink-0"
           >
-            <CaretRightIcon size={20} weight="bold" />
+            <ArrowRightIcon size={20} weight="bold" />
           </div>
         </button>
       </div>
@@ -123,7 +123,7 @@ const ServiceCard = ({
   }, [service]);
 
   return (
-    <div className="bg-white rounded-[15px] overflow-hidden border border-[#f0c9a7] shadow-sm hover:shadow-2xl duration-300">
+    <div className="bg-white rounded-[15px] overflow-hidden border-b-3 border-[#F4A261] shadow-sm hover:shadow-2xl duration-300">
       {/* Image */}
       <div className="relative h-[250px] ">
         <img
@@ -161,13 +161,13 @@ const ServiceCard = ({
 
         {/* Button */}
         <a
-          href="#"
-          className="inline-flex items-center gap-3 text-[#1e8ea3] text-[18px] font-semibold hover:gap-5 duration-300"
-        >
-          {service.acf?.button_text || "Read More"}
+  href="#"
+  className="inline-flex items-center gap-3 text-[#1e8ea3] text-[18px] font-semibold underline underline-offset-5 hover:gap-5 duration-300"
+>
+  {service.acf?.button_text || "Read More"}
 
-          <CaretRightIcon size={20} weight="regular" />
-        </a>
+  <ArrowRightIcon size={20} weight="regular" />
+</a>
       </div>
     </div>
   );

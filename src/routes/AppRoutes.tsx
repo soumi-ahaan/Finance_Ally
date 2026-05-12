@@ -4,7 +4,7 @@ import HomeComponent from "../components/pages/Home/HomeComponent";
 import AboutComponent from "../components/pages/About/AboutComponent";
 import TopHeader from "../components/Layouts/Header/TopHeader";
 import Header from "../components/Layouts/Header/Header";
-import Footer from "../components/Layouts/Footer/Footer"
+import Footer from "../components/Layouts/Footer/Footer";
 import ContactComponent from "../components/pages/Contact/ContactComponent";
 import ServiceComponent from "../components/pages/Service/ServiceComponent";
 import KeeperofBooksComponent from "../components/pages/Service/Keeper-of-Books/KeeperofBooksComponent";
@@ -29,7 +29,7 @@ const ScrollToTop = () => {
 const AppRoutes = () => {
   return (
     <BrowserRouter>
-    <ScrollToTop />
+      <ScrollToTop />
       <TopHeader />
       <Header />
       <Routes>
@@ -39,14 +39,14 @@ const AppRoutes = () => {
         <Route path="/keeper-of-books" element={<KeeperofBooksComponent />} />
         <Route path="/wealth-care" element={<WealthcareComponent />} />
         <Route path="/whole-finance" element={<WholeFinanceComponent />} />
-        <Route path="/living-legacy-strategy" element={<LivingLegacyStrategyComponent />} />
+        <Route path="/living-legacy-strategy" element={<LivingLegacyStrategyComponent />}/>
         <Route path="/who-we-serve" element={<WhoWeServeComponent />} />
         <Route path="/money-medic" element={<MoneyMedicComponent />} />
         <Route path="/resources" element={<ResourcesComponent />} />
-        <Route path="/resources/:slug" element={<BlogDetails/>}/>
+        <Route path="/resources/:slug" element={<BlogDetails />} />
         <Route path="/contact" element={<ContactComponent />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 };
