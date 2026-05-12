@@ -218,8 +218,9 @@ const Header = () => {
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
+                
             }
           >
             Home
@@ -229,8 +230,8 @@ const Header = () => {
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
             About
@@ -291,8 +292,8 @@ const Header = () => {
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
             Who We Serve
@@ -302,8 +303,8 @@ const Header = () => {
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
             Money Medic
@@ -313,8 +314,8 @@ const Header = () => {
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
             Resources
@@ -324,8 +325,8 @@ const Header = () => {
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
               isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#1F7180] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#1F7180]"
+                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
+                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
             }
           >
             Contact
