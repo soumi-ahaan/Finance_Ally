@@ -45,7 +45,7 @@ const OurServices = () => {
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-[#1f2d38] text-[36px] sm:text-[44px] md:text-[38px] lg:text-[38px] leading-[1.2] font-bold font-heading tracking-[-2px]">
+        <h2 className="text-[#1A2B32] text-[36px] sm:text-[44px] md:text-[38px] lg:text-[38px] leading-[1.2] font-bold font-heading tracking-[-2px]">
           Comprehensive Accounting
           <br />
           Services for Your Business
@@ -54,7 +54,7 @@ const OurServices = () => {
 
       {/* Description */}
       <div className="max-w-[430px]">
-        <p className="text-[#6f7b84] text-[16px] md:text-[17px] leading-[2] font-normal">
+        <p className=" text-[16px] md:text-[17px] leading-[2] font-normal">
           Smart, Reliable, And Tailored Accounting Solutions Designed To
           Simplify Your Finances, Improve Accuracy, And Support Your
           Business Growth With Confidence.

@@ -3,10 +3,7 @@ import {CaretRightIcon } from "@phosphor-icons/react"
 
 export const HeroBanner = () => {
   return (
-    <section className=" overflow-hidden relative w-full max-h-[666px] bg-[#E6F4F6] flex items-center justify-center overflow-hidde"
-   
-    >
-        {/* Background Image */}
+    <section className=" overflow-hidden relative w-full max-h-[666px] bg-[#E6F4F6] flex items-center justify-center overflow-hidde">
   <div
     className="absolute inset-0 bg-cover bg-center opacity-20"
     style={{
@@ -31,14 +28,14 @@ export const HeroBanner = () => {
         </div>
         <div className="w-full text-center flex flex-col items-center">
           <div className="flex items-center gap-2 mb-4">
-            <span className="h-[1px] w-8 bg-orange-400"></span>
-            <span className="text-orange-400 font-highlight font-bold italic">Whole Finance Support</span>
+            <span className="h-[1px] w-8 bg-[#F4A261]"></span>
+            <span className="text-[#F4A261] font-highlight font-bold italic">Whole Finance Support</span>
           </div>
-          <h1 className=" text-[24px] md:text-[32px] lg:text-[42px] xl:text-[62px] font-heading font-bold text-[#1A2E35] leading-tight">
-            Your <span className="text-[#329696]">Finance Ally</span> for Business Owners & Family Offices
+          <h1 className=" text-[24px] md:text-[32px] lg:text-[42px] xl:text-[62px] font-heading font-bold text-[#1A2B32] leading-tight">
+            Your <span className="text-[#2B9896]">Finance Ally</span> for Business Owners & Family Offices
           </h1>
 
-          <p className="mt-4 text-gray-600 text-sm md:text-base max-w-lg leading-relaxed">
+          <p className="mt-4 text-[#1A2B32] text-sm md:text-base max-w-lg font-regular leading-relaxed">
             Whole Finance Support Through Bookkeeping, Tax Preparedness, WealthCare Management, And Fractional CFO-Level Clarity.
           </p>
 

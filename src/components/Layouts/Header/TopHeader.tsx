@@ -17,17 +17,17 @@ const TopHeader = () => {
           <div className="hidden lg:flex items-center gap-10 text-sm font-medium">
             
             <div className="flex items-center gap-2">
-              <EnvelopeSimple size={14} weight="fill" />
-              <a href="mailto:bookkeeping@finanzaccounting.com" target="_blank" className="cursor-pointer">bookkeeping@finanzaccounting.com</a>
+              <EnvelopeSimple size={16} weight="fill"/>
+              <a href="mailto:bookkeeping@finanzaaccounting.com" target="_blank" className="cursor-pointer">bookkeeping@finanzaaccounting.com</a>
             </div>
 
             <div className="flex items-center gap-2">
-              <Phone size={14} weight="fill" />
+              <Phone size={16} weight="fill" />
               <a href="tel:7755509999" target="_blank" className="cursor-pointer">7755509999</a>
             </div>
 
             <div className="flex items-center gap-2">
-              <MapPin size={14} weight="fill" />
+              <MapPin size={16} weight="fill" />
               <a href="https://maps.app.goo.gl/9cWAhmm4JSJKJFCr5" target="_blank" className="cursor-pointer">P.O. Box 980, Verdi, NV 89439</a>
             </div>
           </div>
@@ -42,21 +42,21 @@ const TopHeader = () => {
             
             <a
               href="#"
-              className="w-7 h-7 rounded-full bg-white text-[#0f4d5a] flex items-center justify-center hover:scale-105 duration-300 p-1"
+              className="w-7 h-7 rounded-full bg-white text-[#2B9896] flex items-center justify-center hover:scale-105 duration-300 p-1"
             >
               <FacebookLogo  weight="fill" />
             </a>
 
             <a
               href="#"
-              className="w-7 h-7 rounded-full bg-white text-[#0f4d5a] flex items-center justify-center hover:scale-105 duration-300 p-1"
+              className="w-7 h-7 rounded-full bg-white text-[#2B9896] flex items-center justify-center hover:scale-105 duration-300 p-1"
             >
               <LinkedinLogo  weight="fill" />
             </a>
 
             <a
               href="#"
-              className="w-7 h-7 rounded-full bg-white text-[#0f4d5a] flex items-center justify-center hover:scale-105 duration-300 p-1"
+              className="w-7 h-7 rounded-full bg-white text-[#2B9896] flex items-center justify-center hover:scale-105 duration-300 p-1"
             >
               <InstagramLogo  weight="fill" />
             </a>

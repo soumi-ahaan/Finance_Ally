@@ -160,7 +160,7 @@ export const ManagementSection = () => {
 
                         {/* 1. The Central Hub */}
                         <div className="z-30 w-32 h-32 lg:w-44 lg:h-44 rounded-full bg-[#F4A261] flex items-center justify-center text-center p-4 shadow-2xl border border-dashed border-[#ffffff]">
-                            <span className="text-[#FFFFFF] font-extrabold leading-tight text-sm lg:text-xl uppercase tracking-tighter">
+                            <span className="text-[#FFFFFF] font-bold font-heading leading-tight text-sm lg:text-xl uppercase tracking-tighter">
                                 Whole <br /> Finance <br /> Approach
                             </span>
                         </div>

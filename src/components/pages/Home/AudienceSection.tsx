@@ -97,12 +97,12 @@ export default function AudienceSection() {
             <div className="w-12 h-[2px] bg-[#F4A261] mb-2 lg:mb-[14px]" />
             <span className="font-highlight italic text-[#F4A261] text-md md:text-xl xl:text-2xl font-bold">Fractional CFO</span>
 
-            <h2 className="text-2xl  xl:text-[38px] font-bold text-[#123F4E] mt-2 mb-3 leading-tight font-heading">
+            <h2 className="text-2xl  xl:text-[38px] font-bold text-[#1A2B32] mt-2 mb-3 leading-tight font-heading">
               Fractional CFO Support Without <br className="hidden lg:block" />
               the Full-Time CFO Cost
             </h2>
 
-            <p className="text-gray-500 text-sm lg:text-base mb-3 lg:mb-4 leading-relaxed max-w-xl">
+            <p className=" text-sm lg:text-base mb-3 lg:mb-4 leading-relaxed max-w-xl">
               Strategic Financial Leadership, Cash Flow Clarity, And Smarter Decision-Making
               — Without The Cost Of Hiring A Full-Time CFO.
             </p>

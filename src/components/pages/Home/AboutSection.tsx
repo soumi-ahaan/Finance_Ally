@@ -47,8 +47,8 @@ const AboutSection = () => {
                 {/* Right Side: Content */}
                 <div className="flex flex-col">
                     <div className="w-12 h-[2px] bg-[#F4A261] mb-2 lg:mb-[14px]" />
-                    <span className="italic text-[#E9A05D] text-lg font-highlight font-bold">About Us</span>
-                    <h1 className="text-[26px] lg:text-[38px] font-heading font-bold text-[#123F4E] mt-2 mb-3 lg:mb-6">
+                    <span className="italic text-[#F4A261] text-lg font-highlight font-bold">About Us</span>
+                    <h1 className="text-[26px] lg:text-[38px] font-heading font-bold text-[#1A2B32] mt-2 mb-3 lg:mb-6">
                         Meet Your FinanZAlly
                     </h1>
 
@@ -69,7 +69,7 @@ const AboutSection = () => {
                     <ul className="grid grid-cols-1 gap-y-1 lg:gap-y-3">
                         {highlights.map((text, index) => (
                             <li key={index} className="flex items-start space-x-3 group">
-                                <CheckCircleIcon className="w-4 h-4 lg:w-5 lg:h-5 text-[#E9A05D] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                                <CheckCircleIcon className="w-4 h-4 lg:w-5 lg:h-5 text-[#F4A261] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                                 <span className="text-gray-600 md:text-sm lg:text-base font-medium leading-tight">
                                     {text}
                                 </span>
