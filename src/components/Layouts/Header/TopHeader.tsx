@@ -14,7 +14,7 @@ const TopHeader = () => {
         <div className="flex items-center justify-between h-[42px]">
           
           {/* Left Side */}
-          <div className="hidden lg:flex items-center gap-10 text-sm font-medium">
+          <div className="hidden md:flex items-center gap-5 text-xs lg:gap-10 lg:text-sm font-medium">
             
             <div className="flex items-center gap-2">
               <EnvelopeSimple size={16} weight="fill"/>
@@ -26,16 +26,29 @@ const TopHeader = () => {
               <a href="tel:7755509999" target="_blank" className="cursor-pointer">7755509999</a>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="md:flex items-center gap-2">
               <MapPin size={16} weight="fill" />
               <a href="https://maps.app.goo.gl/9cWAhmm4JSJKJFCr5" target="_blank" className="cursor-pointer">P.O. Box 980, Verdi, NV 89439</a>
             </div>
           </div>
+          <div className="flex md:hidden items-center gap-5 text-xs lg:gap-10 lg:text-sm font-medium">
+            
+            <div className="flex  items-center gap-2">
+              
+              <a href="mailto:bookkeeping@finanzaaccounting.com" target="_blank" className="cursor-pointer"><EnvelopeSimple size={16} weight="fill"/></a>
+            </div>
 
-          {/* Mobile */}
-          <div className="lg:hidden text-[12px] font-medium">
-            Contact Us
+            <div className="flex items-center gap-2">
+              
+              <a href="tel:7755509999" target="_blank" className="cursor-pointer"><Phone size={16} weight="fill" /></a>
+            </div>
+
+            <div className="flex items-center gap-2">
+              
+              <a href="https://maps.app.goo.gl/9cWAhmm4JSJKJFCr5" target="_blank" className="cursor-pointer"><MapPin size={16} weight="fill" /></a>
+            </div>
           </div>
+          
 
           {/* Social Icons */}
           <div className="flex items-center gap-2">
