@@ -57,10 +57,13 @@ const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive
-                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-1 2xl:px-2.5 py-3"
-                  : "text-white text-sm 2xl:text-base px-1 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
-              }
+    `relative z-20  text-sm 2xl:text-base px-1 2xl:px-2.5 py-3  transition-all duration-300
+    ${
+      isActive
+        ? "text-[#1F7180] font-bold"
+        : "text-white hover:font-bold hover:text-[#1F7180] hover:scale-110"
+    }`
+  }
             >
               Home
             </NavLink>
@@ -69,64 +72,84 @@ const Header = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive
-                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-1 2xl:px-2.5 py-3"
-                  : "text-white text-sm 2xl:text-base px-1 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
-              }
+    `relative z-20  text-sm 2xl:text-base px-1 2xl:px-2.5 py-3  transition-all duration-300
+    ${
+      isActive
+        ? "text-[#1F7180] font-bold"
+        : "text-white hover:font-bold hover:text-[#1F7180] hover:scale-110"
+    }`
+  }
             >
               About
             </NavLink>
 
+        
             {/* DROPDOWN MENUS */}
-            {menuItems.map((item, index) => (
-              <div key={index} className="relative group">
-                {/* Menu Title */}
-                <div className="flex items-center gap-1 cursor-pointer">
-                  <Link
-                    to="/service"
-                    className="text-white group-hover:text-[#1F7180] hover:font-bold duration-300 text-sm xl:text-base px-1 xl:px-2.5 py-3"
-                  >
-                    {item.title}
-                  </Link>
+{menuItems.map((item, index) => (
+  <div key={index} className="relative group">
+    
+    {/* Menu Title */}
+    <div className="flex items-center gap-1 cursor-pointer">
+      <NavLink
+        to="/service"
+        className={({ isActive }) =>
+          `text-sm 2xl:text-base px-1 xl:px-2.5 py-3 duration-300 ${
+            isActive
+              ? "text-[#1F7180] font-bold"
+              : "text-white group-hover:text-[#1F7180]"
+          }`
+        }
+      >
+        {item.title}
+      </NavLink>
 
-                  <CaretDown
-                    size={12}
-                    weight="bold"
-                    className="text-white group-hover:text-[#00c8d7] duration-300"
-                  />
-                </div>
+      <CaretDown
+        size={12}
+        weight="bold"
+        className="duration-300 text-white group-hover:text-[#1F7180]"
+      />
+    </div>
 
-                {/* Dropdown */}
-                <div className="absolute top-[180%] left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 translate-y-4 group-hover:translate-y-0 min-w-[300px] bg-[#0d0d0d] rounded-2xl p-3 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
-                  <div className="flex flex-col gap-1">
-                    {item.links.map((link, i) => (
-                      <Link
-                        key={i}
-                        to={link.path}
-                        className="group/item flex items-center justify-between rounded-xl px-4 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
-                      >
-                        <span>{link.name}</span>
+    {/* Dropdown */}
+    <div className="absolute top-[180%] left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 translate-y-4 group-hover:translate-y-0 min-w-[300px] bg-[#0d0d0d] rounded-2xl p-3 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
+      <div className="flex flex-col gap-1">
+        {item.links.map((link, i) => (
+          <NavLink
+            key={i}
+            to={link.path}
+            className={({ isActive }) =>
+              `group/item flex items-center justify-between rounded-xl px-4 py-3 text-[15px] duration-300 ${
+                isActive
+                  ? "bg-[#111] text-[#1F7180] font-semibold"
+                  : "text-[#d6d6d6] hover:bg-[#111] hover:text-[#1F7180]"
+              }`
+            }
+          >
+            <span>{link.name}</span>
 
-                        <ArrowRight
-                          size={14}
-                          weight="bold"
-                          className="opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 duration-300"
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+            <ArrowRight
+              size={14}
+              weight="bold"
+              className="opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 duration-300"
+            />
+          </NavLink>
+        ))}
+      </div>
+    </div>
+  </div>
+))}
 
             {/* Who We Serve */}
             <NavLink
               to="/who-we-serve"
               className={({ isActive }) =>
-                isActive
-                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-1 2xl:px-2.5 py-3"
-                  : "text-white text-sm 2xl:text-base px-1 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
-              }
+    `relative z-20  text-sm 2xl:text-base px-1 2xl:px-2.5 py-3  transition-all duration-300
+    ${
+      isActive
+        ? "text-[#1F7180] font-bold"
+        : "text-white hover:font-bold hover:text-[#1F7180] hover:scale-110"
+    }`
+  }
             >
               Who We Serve
             </NavLink>
@@ -135,10 +158,13 @@ const Header = () => {
             <NavLink
               to="/money-medic"
               className={({ isActive }) =>
-                isActive
-                  ? "text-[#1F7180] font-bold text-sm 2xl:text-base px-1 2xl:px-2.5 py-3"
-                  : "text-white text-sm 2xl:text-base px-1 2xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
-              }
+    `relative z-20  text-sm 2xl:text-base px-1 2xl:px-2.5 py-3  transition-all duration-300
+    ${
+      isActive
+        ? "text-[#1F7180] font-bold"
+        : "text-white hover:font-bold hover:text-[#1F7180] hover:scale-110"
+    }`
+  }
             >
               Money Medic
             </NavLink>
@@ -147,10 +173,13 @@ const Header = () => {
             <NavLink
               to="/resources"
               className={({ isActive }) =>
-                isActive
-                  ? "text-[#1F7180] font-bold text-sm xl:text-base px-1 xl:px-2.5 py-3"
-                  : "text-white text-sm xl:text-base px-1 xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
-              }
+    `relative z-20  text-sm 2xl:text-base px-1 2xl:px-2.5 py-3  transition-all duration-300
+    ${
+      isActive
+        ? "text-[#1F7180] font-bold"
+        : "text-white hover:font-bold hover:text-[#1F7180] hover:scale-110"
+    }`
+  }
             >
               Resources
             </NavLink>
@@ -159,10 +188,13 @@ const Header = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                isActive
-                  ? "text-[#1F7180] font-bold text-sm xl:text-base px-1 xl:px-2.5 py-3"
-                  : "text-white text-sm xl:text-base px-1 xl:px-2.5 py-3 hover:text-[#1F7180] hover:font-bold hover:scale-110 transition-all duration-300"
-              }
+    `relative z-20  text-sm 2xl:text-base px-1 2xl:px-2.5 py-3  transition-all duration-300
+    ${
+      isActive
+        ? "text-[#1F7180] font-bold"
+        : "text-white hover:font-bold hover:text-[#1F7180] hover:scale-110"
+    }`
+  }
             >
               Contact
             </NavLink>
@@ -220,10 +252,14 @@ const Header = () => {
             to="/"
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
-              isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
-            }
+    `relative z-20  px-6 py-3 text-base font-[550]
+    ${
+      isActive
+        ? "bg-[#2B9896] text-white"
+        : "bg-transparent text-[#2B9896]"
+    }`
+  }
+            
           >
             Home
           </NavLink>
@@ -231,72 +267,99 @@ const Header = () => {
             to="/about"
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
-              isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
-            }
+    `relative z-20  px-6 py-3 text-base font-[550]
+    ${
+      isActive
+        ? "bg-[#2B9896] text-white"
+        : "bg-transparent text-[#2B9896]"
+    }`
+  }
           >
             About
           </NavLink>
 
           {/* DROPDOWN MENUS */}
-          {menuItems.map((item, index) => {
-            const isOpen = openIndex === index;
+{menuItems.map((item, index) => {
+  const isOpen = openIndex === index;
 
-            return (
-              <div key={index} className="relative">
-                {/* Menu Title */}
-                <div
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex items-center justify-between gap-1 cursor-pointer text-[#2B9896] hover:bg-[#2B9896] hover:text-white text-base px-6 py-3"
-                >
-                  <span className="font-[550]">{item.title}</span>
+  return (
+    <div key={index} className="relative">
+      
+      {/* Menu Title */}
+      <div
+        onClick={() => setOpenIndex(isOpen ? null : index)}
+        className="flex items-center justify-between cursor-pointer"
+      >
+        <NavLink
+          to="/service"
+          className={({ isActive }) =>
+            `flex-1 px-6 py-3 text-base font-[550] duration-300 ${
+              isActive
+                ? "bg-[#2B9896] text-white"
+                : "text-[#2B9896] hover:bg-[#2B9896] hover:text-white"
+            }`
+          }
+        >
+          {item.title}
+        </NavLink>
 
-                  <CaretDown
-                    size={16}
-                    weight="bold"
-                    className={`duration-300 ${isOpen ? "rotate-180" : ""}`}
-                  />
-                </div>
+        <div
+          className={`px-4 text-[#2B9896] duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        >
+          <CaretDown size={16} weight="bold" />
+        </div>
+      </div>
 
-                {/* Dropdown */}
-                <div
-                  className={`overflow-hidden duration-300 ${
-                    isOpen
-                      ? "max-h-[500px] opacity-100 mt-2"
-                      : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <div className="min-w-[50px] bg-[#2B9896] rounded-sm p-2 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
-                    <div className="flex flex-col gap-1">
-                      {item.links.map((link, i) => (
-                        <Link
-                          key={i}
-                          to={link.path}
-                          onClick={() => {
-                            setMobileMenu(false);
-                          }}
-                          className="flex items-center justify-between rounded-sm px-2 py-3 text-[15px] text-[#d6d6d6] hover:bg-[#111] hover:text-[#00c8d7] duration-300"
-                        >
-                          <span>{link.name}</span>
+      {/* Dropdown */}
+      <div
+        className={`overflow-hidden duration-300 ${
+          isOpen
+            ? "max-h-[500px] opacity-100 mt-2"
+            : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-[#111] rounded-sm p-2 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
+          <div className="flex flex-col gap-1">
+            {item.links.map((link, i) => (
+              <NavLink
+                key={i}
+                to={link.path}
+                onClick={() => {
+                  setMobileMenu(false);
+                  
+                }}
+                className={({ isActive }) =>
+                  `group/item flex items-center justify-between rounded-xl px-4 py-3 text-base duration-300 ${
+                    isActive
+                  ? "bg-[#111] text-[#2B9896] font-semibold"
+                  : "text-[#d6d6d6] hover:bg-[#111] hover:text-[#2B9896]"
+                  }`
+                }
+              >
+                <span>{link.name}</span>
 
-                          <ArrowRight size={14} weight="bold" />
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+                <ArrowRight size={14} weight="bold" />
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+})}
           <NavLink
             to="/who-we-serve"
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
-              isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
-            }
+    `relative z-20  px-6 py-3 text-base font-[550]
+    ${
+      isActive
+        ? "bg-[#2B9896] text-white"
+        : "bg-transparent text-[#2B9896]"
+    }`
+  }
           >
             Who We Serve
           </NavLink>
@@ -304,10 +367,13 @@ const Header = () => {
             to="/money-medic"
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
-              isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
-            }
+    `relative z-20  px-6 py-3 text-base font-[550]
+    ${
+      isActive
+        ? "bg-[#2B9896] text-white"
+        : "bg-transparent text-[#2B9896]"
+    }`
+  }
           >
             Money Medic
           </NavLink>
@@ -315,10 +381,13 @@ const Header = () => {
             to="/resources"
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
-              isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
-            }
+    `relative z-20  px-6 py-3 text-base font-[550]
+    ${
+      isActive
+        ? "bg-[#2B9896] text-white"
+        : "bg-transparent text-[#2B9896]"
+    }`
+  }
           >
             Resources
           </NavLink>
@@ -326,10 +395,13 @@ const Header = () => {
             to="/contact"
             onClick={() => setMobileMenu(false)}
             className={({ isActive }) =>
-              isActive
-                ? "px-6 py-3 text-base font-[550] bg-[#2B9896] text-white"
-                : "px-6 py-3 text-base font-[550] bg-transparent text-[#2B9896]"
-            }
+    `relative z-20  px-6 py-3 text-base font-[550]
+    ${
+      isActive
+        ? "bg-[#2B9896] text-white"
+        : "bg-transparent text-[#2B9896]"
+    }`
+  }
           >
             Contact
           </NavLink>

@@ -65,7 +65,7 @@ export default function AudienceSection() {
               <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 lg:px-10 py-10">
 
                 {/* Title */}
-                <h2 className="text-white text-2xl sm:text-3xl xl:text-[38px] leading-[1.1] font-bold mb-5">
+                <h2 className="text-white text-2xl sm:text-3xl xl:text-[38px] leading-[1.1] font-bold mb-5 font-heading">
                   {item.title}
                 </h2>
 
