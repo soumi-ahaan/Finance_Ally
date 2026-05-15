@@ -30,7 +30,7 @@ const OurServices = () => {
   <div className="relative max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 xl:px-[70px]">
     
     {/* Top Content */}
-    <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_0.9fr_auto] gap-10 lg:gap-16 items-center mb-14 lg:mb-16">
+    <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_0.9fr_auto] gap-8 xl:gap-16 items-center mb-14 lg:mb-16">
 
       {/* Left Content */}
       <div className="max-w-[760px]">
@@ -39,13 +39,13 @@ const OurServices = () => {
         <div className="flex items-center gap-3 mb-5">
           <div className="w-10 h-[2px] bg-[#f4a261]"></div>
 
-          <span className="text-[#f4a261] italic text-[18px] lg:text-[20px] font-bold font-highlight tracking-wide">
+          <span className="font-highlight italic text-[#F4A261] text-md md:text-xl xl:text-2xl font-bold">
             Our Services
           </span>
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-[#1A2B32] text-[36px] sm:text-[44px] md:text-[38px] lg:text-[38px] leading-[1.2] font-bold font-heading tracking-[-2px]">
+        <h2 className="text-[#1A2B32] text-4xl sm:text-4xl lg:text-2xl xl:text-[38px] leading-[1.2] font-bold font-heading tracking-[-2px]">
           Comprehensive Accounting
           <br />
           Services for Your Business
@@ -53,8 +53,8 @@ const OurServices = () => {
       </div>
 
       {/* Description */}
-      <div className="max-w-[430px]">
-        <p className=" text-[16px] md:text-[17px] leading-[2] font-normal">
+      <div className="lg:pt-12 max-w-[430px]">
+        <p className=" text-base  leading-[2]">
           Smart, Reliable, And Tailored Accounting Solutions Designed To
           Simplify Your Finances, Improve Accuracy, And Support Your
           Business Growth With Confidence.
